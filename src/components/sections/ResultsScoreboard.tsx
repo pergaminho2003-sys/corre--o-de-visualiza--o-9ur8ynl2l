@@ -17,7 +17,7 @@ const FALLBACK_RESULTS: ResultRecord[] = [
   },
   {
     id: 'l6d23uooqi9m117',
-    metric_value: 1200,
+    metric_value: 400,
     prefix: '',
     suffix: '+',
     label: 'viagens gerenciadas',
