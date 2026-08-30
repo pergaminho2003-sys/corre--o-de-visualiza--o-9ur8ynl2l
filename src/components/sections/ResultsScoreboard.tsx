@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { ResultRecord } from '@/types/landing'
 import { getResults } from '@/services/results'
-import { Trophy, TrendingUp, Users, Award, ShieldAlert } from 'lucide-react'
+import { Trophy, TrendingUp, Users, Award } from 'lucide-react'
 
 // Default fallback data if empty/loading/error
 const FALLBACK_RESULTS: ResultRecord[] = [
@@ -27,10 +27,10 @@ const FALLBACK_RESULTS: ResultRecord[] = [
   },
   {
     id: '37wyyftfzatmqdo',
-    metric_value: 40,
-    prefix: '',
-    suffix: '+',
-    label: 'clubes atendidos no Brasil',
+    metric_value: 38,
+    prefix: 'R$ ',
+    suffix: ' mil',
+    label: 'de economia por equipe',
     order: 3,
     created: '',
     updated: '',
@@ -140,10 +140,18 @@ export function ResultsScoreboard({ results = [] }: { results?: ResultRecord[] }
                 {getIcon(idx)}
               </div>
 
-              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white font-heading tracking-tight flex items-center justify-center">
-                {item.prefix && <span className="text-red-500 mr-0.5">{item.prefix}</span>}
+              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white font-heading tracking-tight flex items-baseline justify-center">
+                {item.prefix && (
+                  <span className="text-red-500 mr-1 text-2xl sm:text-3xl md:text-4xl">
+                    {item.prefix}
+                  </span>
+                )}
                 <CountUp endValue={item.metric_value} />
-                {item.suffix && <span className="text-red-400 ml-0.5">{item.suffix}</span>}
+                {item.suffix && (
+                  <span className="text-red-400 ml-1 text-2xl sm:text-3xl md:text-4xl">
+                    {item.suffix}
+                  </span>
+                )}
               </div>
 
               <p className="text-xs sm:text-sm text-slate-400 font-medium mt-2 leading-snug">
