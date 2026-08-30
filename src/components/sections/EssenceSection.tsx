@@ -37,8 +37,8 @@ export function EssenceSection() {
         </h2>
         <div className="sprint-line mx-auto" />
         <p className="text-slate-400 text-sm sm:text-base pt-2">
-          Nascida da vivência real nos campos, pistas e quadras — onde cada viagem é a extensão da
-          preparação de um campeão.
+          Da vivência real nos campos e quadras — onde cada viagem é a extensão da preparação de um
+          campeão.
         </p>
       </div>
 
