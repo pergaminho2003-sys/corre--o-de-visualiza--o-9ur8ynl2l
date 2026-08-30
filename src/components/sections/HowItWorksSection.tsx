@@ -5,8 +5,7 @@ const STEPS = [
     step: '01',
     icon: MessageSquareText,
     title: 'Conte seu plano',
-    description:
-      'Fale com a nossa equipe esportiva e compartilhe os objetivos do clube, datas do torneio, tamanho da delegação e orçamento disponível.',
+    description: 'Compartilhe os objetivos e demandas do clube',
     highlight: 'Diagnóstico sem custo',
   },
   {
