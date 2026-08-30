@@ -11,7 +11,7 @@ const SERVICES = [
   {
     icon: Car,
     title: 'Locação de veículos / translado',
-    description: 'Translados e veículos dedicados para atletas e comissão',
+    description: 'Parceria Localiza e Movida',
     tag: 'Mobilidade Local',
   },
   {
