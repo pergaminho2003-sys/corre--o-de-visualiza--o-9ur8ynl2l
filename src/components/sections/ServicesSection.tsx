@@ -1,6 +1,6 @@
 import {
   Plane,
-  Hotel,
+  Car,
   Ticket,
   CalendarCheck,
   ShieldCheck,
@@ -18,11 +18,11 @@ const SERVICES = [
     tag: 'Logística Total',
   },
   {
-    icon: Hotel,
-    title: 'Hospedagem Esportiva',
+    icon: Car,
+    title: 'Locação de Carro',
     description:
-      'Hotéis e centros de treinamento rigorosamente selecionados com foco na rotina, nutrição e descanso de atletas.',
-    tag: 'Foco no Atleta',
+      'Veículos reservados para deslocamento de atletas, comissão técnica e dirigentes durante a viagem, com flexibilidade de horários e rotas.',
+    tag: 'Mobilidade Local',
   },
   {
     icon: Ticket,
