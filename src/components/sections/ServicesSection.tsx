@@ -19,7 +19,7 @@ const SERVICES = [
   },
   {
     icon: Car,
-    title: 'Locação de Carro',
+    title: 'Locação de veículos / translado',
     description:
       'Veículos reservados para deslocamento de atletas, comissão técnica e dirigentes durante a viagem, com flexibilidade de horários e rotas.',
     tag: 'Mobilidade Local',
