@@ -37,7 +37,7 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
             <span className="w-2 h-2 rounded-full bg-red-500 absolute" />
-            <span className="ml-1">Viagens esportivas para clubes e atletas</span>
+            <span className="ml-1">Viagens&nbsp;para clubes e atletas</span>
           </div>
 
           {/* Headline */}
@@ -50,9 +50,8 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl">
-            Planejamos cada detalhe da sua experiência internacional: passagens, hospedagem, jogos,
-            treinos e logística completa — para o seu time jogar o melhor futebol em qualquer lugar
-            do mundo.
+            Organizamos sua demanda e atendemos a sua necessidade: passagens, hospedagens e
+            logística completa — para a sua equipe jogar o melhor jogo em qualquer lugar do mundo.
           </p>
 
           {/* CTAs */}
@@ -83,7 +82,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <Award className="w-4 h-4 text-red-400 shrink-0" />
-              <span>Torneios de elite FIFA/UEFA</span>
+              <span>Agilidade e condições especiais</span>
             </div>
             <div className="hidden sm:flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
