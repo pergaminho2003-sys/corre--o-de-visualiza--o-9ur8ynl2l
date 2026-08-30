@@ -44,8 +44,7 @@ export function HowItWorksSection() {
           </h2>
           <div className="sprint-line mx-auto" />
           <p className="text-slate-400 text-sm sm:text-base pt-2">
-            Um processo testado e aprovado para eliminar preocupações operacionais da comissão
-            técnica e diretoria.
+            Um processo testado e aprovado para eliminar preocupações operacionais.
           </p>
         </div>
 
