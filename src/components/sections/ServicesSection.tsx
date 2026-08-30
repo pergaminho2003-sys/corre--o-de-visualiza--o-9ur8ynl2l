@@ -12,9 +12,9 @@ import { Button } from '@/components/ui/button'
 const SERVICES = [
   {
     icon: Plane,
-    title: 'Passagens & Traslados',
+    title: 'Passagens & Hospedagens',
     description:
-      'Emissão de passagens aéreas para grupos e traslados porta a porta, do aeroporto ao hotel e centro de treinamento.',
+      'Emissão de passagens aéreas para grupos e reservas de hospedagens selecionadas com foco em conforto e logística.',
     tag: 'Logística Total',
   },
   {
