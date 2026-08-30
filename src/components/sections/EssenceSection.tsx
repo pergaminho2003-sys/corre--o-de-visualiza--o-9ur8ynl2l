@@ -76,8 +76,8 @@ export function EssenceSection() {
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed">
               A Player Mindset não foi criada atrás de uma mesa de escritório convencional. Ela
-              nasceu da experiência direta do fundador com o esporte, viagens e a vivência intensa
-              como atleta.
+              nasceu da experiência direta da fundadora com o esporte, a paixão por viagens
+              <span>&nbsp;e a vivência como atleta.</span>
             </p>
             <p className="text-slate-400 text-sm leading-relaxed">
               Esse histórico moldou um conhecimento profundo da{' '}
