@@ -24,7 +24,7 @@ const SERVICES = [
   },
   {
     icon: Headphones,
-    title: 'Suporte 24h e assessoria jurídica',
+    title: 'Suporte e assessoria jurídica',
     description:
       'Acompanhamento completo durante toda a viagem, com nossa equipe bilíngue sempre disponível presencialmente ou por plantão.',
     tag: 'Plantão VIP',
