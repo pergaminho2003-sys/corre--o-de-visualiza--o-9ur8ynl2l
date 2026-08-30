@@ -116,7 +116,7 @@ export function EssenceSection() {
               </blockquote>
 
               {/* Growth Mindset Text */}
-              <div className="space-y-4 pt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <div className="pt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
                 <p>
                   <span>
                     Não se trata apenas de emitir bilhetes aéreos ou reservar hotéis. Trata-se de
@@ -124,11 +124,6 @@ export function EssenceSection() {
                   </span>
                   que a vida acontece além das fronteiras — quando você se entrega ao desconhecido
                   com coragem e confiança.
-                </p>
-                <p className="text-slate-400">
-                  Não se trata apenas de emitir bilhetes aéreos ou reservar hotéis. Trata-se de
-                  construir o ambiente perfeito para que atletas, equipes e comissões técnicas
-                  alcancem sua melhor versão quando a pressão é máxima.
                 </p>
               </div>
 
