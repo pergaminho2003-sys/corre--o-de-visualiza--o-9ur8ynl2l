@@ -59,8 +59,7 @@ export function ServicesSection() {
         </h2>
         <div className="sprint-line mx-auto" />
         <p className="text-slate-400 text-sm sm:text-base pt-2">
-          Cuidamos de cada etapa da logística para que a sua comissão técnica e seus jogadores se
-          concentrem unicamente em vencer.
+          Cuidamos de cada etapa da logística para sua comissão técnica , funcionários e jogadores.
         </p>
       </div>
 
