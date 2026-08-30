@@ -1,12 +1,4 @@
-import {
-  Plane,
-  Car,
-  Ticket,
-  CalendarCheck,
-  ShieldCheck,
-  Headphones,
-  ArrowRight,
-} from 'lucide-react'
+import { Plane, Car, CalendarCheck, ShieldCheck, Headphones, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const SERVICES = [
@@ -23,13 +15,6 @@ const SERVICES = [
     description:
       'Veículos reservados para deslocamento de atletas, comissão técnica e dirigentes durante a viagem, com flexibilidade de horários e rotas.',
     tag: 'Mobilidade Local',
-  },
-  {
-    icon: Ticket,
-    title: 'Ingressos & Experiências',
-    description:
-      'Acesso a jogos, estádios lendários, museus de clubes e experiências exclusivas nos principais palcos do mundo.',
-    tag: 'Imersão Cultural',
   },
   {
     icon: CalendarCheck,
@@ -79,14 +64,16 @@ export function ServicesSection() {
         </p>
       </div>
 
-      {/* 3-Column Cards Grid */}
+      {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {SERVICES.map((item, idx) => {
           const Icon = item.icon
           return (
             <div
               key={idx}
-              className="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-red-500/50 hover:bg-slate-900/90 hover:shadow-xl hover:shadow-red-500/10 group relative overflow-hidden"
+              className={`bg-slate-900/60 border border-slate-800 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-red-500/50 hover:bg-slate-900/90 hover:shadow-xl hover:shadow-red-500/10 group relative overflow-hidden ${
+                idx === 4 ? 'md:col-span-2 lg:col-span-1' : ''
+              }`}
             >
               {/* Corner accent glow on hover */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-bl-full pointer-events-none group-hover:bg-red-500/15 transition-colors" />
