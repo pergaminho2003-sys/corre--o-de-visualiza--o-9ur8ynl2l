@@ -11,6 +11,30 @@ const DESTINATIONS = [
   'Belém',
 ]
 
+function SoccerBallIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="12 8 8.5 10.5 9.8 14.5 14.2 14.5 15.5 10.5 12 8" />
+      <path d="M12 2v6" />
+      <path d="M12 18v4" />
+      <path d="m4.93 4.93 4.24 3.07" />
+      <path d="m14.83 8 4.24-3.07" />
+      <path d="m14.83 16 4.24 3.07" />
+      <path d="m4.93 19.07 4.24-3.07" />
+    </svg>
+  )
+}
+
 export function MarqueeStrip() {
   return (
     <div
@@ -27,7 +51,7 @@ export function MarqueeStrip() {
           {DESTINATIONS.map((city, i) => (
             <span key={`dest-1-${i}`} className="inline-flex items-center gap-6">
               <span className="hover:text-white transition-colors">{city}</span>
-              <span className="text-red-600/80 text-xs">★</span>
+              <SoccerBallIcon className="w-3.5 h-3.5 text-red-500/80 shrink-0" />
             </span>
           ))}
         </div>
@@ -37,7 +61,7 @@ export function MarqueeStrip() {
           {DESTINATIONS.map((city, i) => (
             <span key={`dest-2-${i}`} className="inline-flex items-center gap-6">
               <span className="hover:text-white transition-colors">{city}</span>
-              <span className="text-red-600/80 text-xs">★</span>
+              <SoccerBallIcon className="w-3.5 h-3.5 text-red-500/80 shrink-0" />
             </span>
           ))}
         </div>
@@ -47,7 +71,7 @@ export function MarqueeStrip() {
           {DESTINATIONS.map((city, i) => (
             <span key={`dest-3-${i}`} className="inline-flex items-center gap-6">
               <span className="hover:text-white transition-colors">{city}</span>
-              <span className="text-red-600/80 text-xs">★</span>
+              <SoccerBallIcon className="w-3.5 h-3.5 text-red-500/80 shrink-0" />
             </span>
           ))}
         </div>
