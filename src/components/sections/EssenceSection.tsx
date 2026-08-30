@@ -52,8 +52,8 @@ export function EssenceSection() {
           {/* Photo / Visual Frame */}
           <div className="relative rounded-2xl overflow-hidden border border-slate-800/80 mb-6 group-hover:border-red-500/30 transition-colors">
             <img
-              src="https://img.usecurling.com/p/800/600?q=athlete%20runner%20stadium%20sunset&dpr=2"
-              alt="Atleta em preparação e viagem esportiva"
+              src="https://img.usecurling.com/p/800/600?q=women%20soccer%20match&dpr=2"
+              alt="Futebol feminino em campo de jogo"
               className="w-full h-64 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-90 contrast-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
