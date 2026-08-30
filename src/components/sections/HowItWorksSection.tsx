@@ -11,7 +11,7 @@ const STEPS = [
   {
     step: '02',
     icon: MapPinned,
-    title: 'Montamos a viagem',
+    title: 'Elaboramos as estratégias e condições de pagamento',
     description:
       'Criamos o roteiro completo personalizado: passagens em grupo, hotéis com dieta especial para atletas, centros de treinamento e seguro completo.',
     highlight: 'Planejamento 100% sob medida',
