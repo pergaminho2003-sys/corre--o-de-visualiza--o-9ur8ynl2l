@@ -118,10 +118,12 @@ export function EssenceSection() {
               {/* Growth Mindset Text */}
               <div className="space-y-4 pt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
                 <p>
-                  Aqueles que cultivam o{' '}
-                  <strong className="text-white font-semibold">mindset de crescimento</strong>{' '}
-                  entendem que a vida acontece além das fronteiras — quando você se entrega ao
-                  desconhecido com coragem e confiança.
+                  <span>
+                    Não se trata apenas de emitir bilhetes aéreos ou reservar hotéis. Trata-se de
+                    entender{' '}
+                  </span>
+                  que a vida acontece além das fronteiras — quando você se entrega ao desconhecido
+                  com coragem e confiança.
                 </p>
                 <p className="text-slate-400">
                   Não se trata apenas de emitir bilhetes aéreos ou reservar hotéis. Trata-se de
