@@ -115,7 +115,7 @@ export function ResultsScoreboard({ results = [] }: { results?: ResultRecord[] }
   return (
     <section
       id="numeros"
-      className="relative z-20 -mt-6 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
+      className="relative z-10 pt-12 md:pt-16 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
     >
       {/* Scoreboard Shell */}
       <div className="bg-slate-900/95 border border-slate-800/90 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl ring-1 ring-red-500/20">
