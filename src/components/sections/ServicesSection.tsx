@@ -5,7 +5,7 @@ const SERVICES = [
   {
     icon: Plane,
     title: 'Passagens & Hospedagens',
-    description: 'Deslocamento aéreo ou terrestres e hospedagens que atendam seu objetivo',
+    description: 'Deslocamento aéreo ou terrestre e hospedagens que atendam seu objetivo',
     tag: 'Logística Total',
   },
   {
