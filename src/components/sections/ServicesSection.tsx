@@ -5,7 +5,7 @@ const SERVICES = [
   {
     icon: Plane,
     title: 'Passagens & Hospedagens',
-    description: 'Voos para grupos e hotéis com foco em conforto e logística',
+    description: 'Deslocamento aéreo ou terrestres e hospedagens que atendam seu objetivo',
     tag: 'Logística Total',
   },
   {
