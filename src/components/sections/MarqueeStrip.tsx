@@ -1,16 +1,14 @@
 const DESTINATIONS = [
-  'Barcelona',
-  'Lisboa',
-  'Orlando',
-  'Tóquio',
-  'Paris',
-  'Buenos Aires',
-  'Londres',
-  'Dubai',
-  'Roma',
-  'Miami',
-  'Madri',
-  'Doha',
+  'Maceió',
+  'João Pessoa',
+  'São Luiz',
+  'Porto Alegre',
+  'Rio de Janeiro',
+  'Palmas',
+  'Manaus',
+  'Fortaleza',
+  'Natal',
+  'Belém',
 ]
 
 export function MarqueeStrip() {
