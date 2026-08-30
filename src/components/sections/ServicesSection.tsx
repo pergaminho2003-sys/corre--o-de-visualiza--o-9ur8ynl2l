@@ -19,8 +19,7 @@ const SERVICES = [
   {
     icon: ShieldCheck,
     title: 'Documentação & Seguros',
-    description:
-      'Passaportes, emissão de vistos, autorizações de menores e apólices de seguro-saúde de alta cobertura resolvidos.',
+    description: 'Embarque de menores de idade, seguro viagem e check list',
     tag: 'Zero Risco',
   },
   {
