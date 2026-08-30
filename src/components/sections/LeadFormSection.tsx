@@ -114,7 +114,7 @@ export function LeadFormSection() {
     <section id="orcamento" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span className="text-xs uppercase font-bold tracking-widest text-emerald-400">
+        <span className="text-xs uppercase font-bold tracking-widest text-red-500">
           Atendimento Direto
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
@@ -142,7 +142,7 @@ export function LeadFormSection() {
 
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-900/70 border border-slate-800">
-              <Clock className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+              <Clock className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
               <div>
                 <h4 className="text-sm font-bold text-white">Retorno Rápido</h4>
                 <p className="text-xs text-slate-400">
@@ -152,7 +152,7 @@ export function LeadFormSection() {
             </div>
 
             <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-900/70 border border-slate-800">
-              <ShieldCheck className="w-5 h-5 text-yellow-400 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
               <div>
                 <h4 className="text-sm font-bold text-white">Sem Taxas Ocultas</h4>
                 <p className="text-xs text-slate-400">
@@ -174,15 +174,13 @@ export function LeadFormSection() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 font-semibold text-sm transition-colors group"
+              className="flex items-center justify-between p-3.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 font-semibold text-sm transition-colors group"
             >
               <div className="flex items-center gap-2.5">
-                <MessageCircle className="w-5 h-5 text-emerald-400" />
+                <MessageCircle className="w-5 h-5 text-red-500" />
                 <span>Fale direto no WhatsApp</span>
               </div>
-              <span className="text-xs bg-emerald-500/20 px-2 py-0.5 rounded text-emerald-300">
-                Online
-              </span>
+              <span className="text-xs bg-red-500/20 px-2 py-0.5 rounded text-red-300">Online</span>
             </a>
 
             <a
@@ -197,11 +195,11 @@ export function LeadFormSection() {
 
         {/* Right Column: Match Ticket Form Card */}
         <div className="lg:col-span-7">
-          <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden ring-4 ring-emerald-500/20">
+          <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden ring-4 ring-red-500/20 border border-slate-200">
             {/* Ticket header perforation styling */}
             <div className="border-b-2 border-dashed border-slate-300 pb-6 mb-8 flex items-center justify-between">
               <div>
-                <span className="text-[11px] font-black uppercase tracking-widest text-emerald-700 block">
+                <span className="text-[11px] font-black uppercase tracking-widest text-red-600 block">
                   FORMULÁRIO DE PROPOSTA ESPORTIVA
                 </span>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 font-heading">
@@ -229,7 +227,7 @@ export function LeadFormSection() {
             {/* Form or Success State */}
             {success ? (
               <div className="py-10 text-center space-y-6">
-                <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto ring-8 ring-emerald-50">
+                <div className="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto ring-8 ring-red-50">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
 
@@ -270,7 +268,7 @@ export function LeadFormSection() {
                       placeholder="Ex: Associação Atlética Horizonte"
                       value={formData.club_name}
                       onChange={(e) => setFormData({ ...formData, club_name: e.target.value })}
-                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-emerald-500"
+                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-red-500"
                     />
                     {fieldErrors.club_name && (
                       <span className="text-xs text-red-600 font-medium block">
@@ -292,7 +290,7 @@ export function LeadFormSection() {
                       placeholder="Ex: Carlos Menezes"
                       value={formData.contact_name}
                       onChange={(e) => setFormData({ ...formData, contact_name: e.target.value })}
-                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-emerald-500"
+                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-red-500"
                     />
                     {fieldErrors.contact_name && (
                       <span className="text-xs text-red-600 font-medium block">
@@ -317,7 +315,7 @@ export function LeadFormSection() {
                       placeholder="contato@seutime.com.br"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-emerald-500"
+                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-red-500"
                     />
                     {fieldErrors.email && (
                       <span className="text-xs text-red-600 font-medium block">
@@ -340,7 +338,7 @@ export function LeadFormSection() {
                       placeholder="(11) 98765-4321"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-emerald-500"
+                      className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-red-500"
                     />
                     {fieldErrors.phone && (
                       <span className="text-xs text-red-600 font-medium block">
@@ -362,7 +360,7 @@ export function LeadFormSection() {
                     id="estimated_trips"
                     value={formData.estimated_trips}
                     onChange={(e) => setFormData({ ...formData, estimated_trips: e.target.value })}
-                    className="w-full h-10 px-3 py-2 rounded-md bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
+                    className="w-full h-10 px-3 py-2 rounded-md bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 font-medium"
                   >
                     <option value="1-10">1 a 10 viagens por ano</option>
                     <option value="11-30">11 a 30 viagens por ano</option>
@@ -390,7 +388,7 @@ export function LeadFormSection() {
                     placeholder="Conte sobre o destino pretendido, número previsto de atletas/comissão técnica e datas estimadas..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-emerald-500 resize-none"
+                    className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-red-500 resize-none"
                   />
                 </div>
 
@@ -402,12 +400,12 @@ export function LeadFormSection() {
                 >
                   {loading ? (
                     <>
-                      <Loader2 className="w-5 h-5 animate-spin text-emerald-400" />
+                      <Loader2 className="w-5 h-5 animate-spin text-red-500" />
                       Enviando proposta...
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5 text-emerald-400" />
+                      <Send className="w-5 h-5 text-red-500" />
                       Enviar solicitação de orçamento
                     </>
                   )}

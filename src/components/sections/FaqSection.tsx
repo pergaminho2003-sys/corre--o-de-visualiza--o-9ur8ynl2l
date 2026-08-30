@@ -33,7 +33,7 @@ export function FaqSection() {
     <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[900px] mx-auto">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span className="text-xs uppercase font-bold tracking-widest text-emerald-400">
+        <span className="text-xs uppercase font-bold tracking-widest text-red-500">
           Tire suas Dúvidas
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
@@ -51,9 +51,9 @@ export function FaqSection() {
           <AccordionItem
             key={index}
             value={`item-${index}`}
-            className="border border-slate-800 bg-slate-900/60 rounded-xl px-5 transition-colors data-[state=open]:border-emerald-500/40 data-[state=open]:bg-slate-900/90"
+            className="border border-slate-800 bg-slate-900/60 rounded-xl px-5 transition-colors data-[state=open]:border-red-500/40 data-[state=open]:bg-slate-900/90"
           >
-            <AccordionTrigger className="text-left font-bold text-base sm:text-lg text-white hover:text-emerald-400 py-5 font-heading">
+            <AccordionTrigger className="text-left font-bold text-base sm:text-lg text-white hover:text-red-400 py-5 font-heading">
               {faq.q}
             </AccordionTrigger>
             <AccordionContent className="text-slate-300 text-sm leading-relaxed pb-5 pt-1">

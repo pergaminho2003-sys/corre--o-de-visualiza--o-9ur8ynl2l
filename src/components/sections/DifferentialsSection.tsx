@@ -48,7 +48,7 @@ export function DifferentialsSection() {
       <div className="max-w-[1200px] mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-xs uppercase font-bold tracking-widest text-emerald-400">
+          <span className="text-xs uppercase font-bold tracking-widest text-red-500">
             Por que a Player Mindset?
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
@@ -68,13 +68,13 @@ export function DifferentialsSection() {
             return (
               <div
                 key={idx}
-                className="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-7 hover:border-emerald-500/40 hover:bg-slate-950 transition-all duration-200 group"
+                className="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-7 hover:border-red-500/40 hover:bg-slate-950 transition-all duration-200 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all duration-200">
+                <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all duration-200">
                   <Icon className="w-6 h-6" />
                 </div>
 
-                <h3 className="text-lg font-bold text-white font-heading mb-2.5 group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white font-heading mb-2.5 group-hover:text-red-400 transition-colors">
                   {item.title}
                 </h3>
 

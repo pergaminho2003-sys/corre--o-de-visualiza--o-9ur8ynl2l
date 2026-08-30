@@ -13,7 +13,7 @@ export function FloatingWhatsApp() {
     >
       {/* Desktop Hover Tooltip */}
       <div className="hidden md:flex opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 bg-slate-900 border border-slate-700/80 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl pointer-events-none items-center gap-1.5">
-        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
         Fale conosco no WhatsApp
       </div>
 
@@ -23,12 +23,12 @@ export function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp com a Player Mindset Viagens"
-        className="relative w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 flex items-center justify-center shadow-lg shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-all duration-200"
+        className="relative w-14 h-14 rounded-full bg-red-600 hover:bg-red-500 text-white flex items-center justify-center shadow-lg shadow-red-600/40 hover:scale-110 active:scale-95 transition-all duration-200"
       >
         {/* Pulse ring */}
-        <span className="absolute -inset-1 rounded-full bg-emerald-500 opacity-40 animate-ping pointer-events-none" />
+        <span className="absolute -inset-1 rounded-full bg-red-600 opacity-40 animate-ping pointer-events-none" />
 
-        <MessageCircle className="w-7 h-7 fill-slate-950 text-slate-950" />
+        <MessageCircle className="w-7 h-7 fill-white text-white" />
       </a>
     </aside>
   )

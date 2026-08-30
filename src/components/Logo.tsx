@@ -1,34 +1,35 @@
 import { Link } from 'react-router-dom'
-import { Zap } from 'lucide-react'
+import logoAsset from '@/assets/apresentacao-e959a.png'
 
 interface LogoProps {
   className?: string
+  variant?: 'full' | 'compact' | 'horizontal'
   onClick?: () => void
+  size?: 'sm' | 'md' | 'lg'
 }
 
-export function Logo({ className = '', onClick }: LogoProps) {
+export function Logo({ className = '', variant = 'horizontal', onClick, size = 'md' }: LogoProps) {
+  // Size presets
+  const sizeClasses = {
+    sm: 'h-8 sm:h-9',
+    md: 'h-10 sm:h-12',
+    lg: 'h-14 sm:h-16',
+  }
+
   return (
     <Link
       to="/"
       onClick={onClick}
-      className={`inline-flex items-center gap-2.5 group focus:outline-none ${className}`}
+      className={`inline-flex items-center gap-3 group focus:outline-none transition-transform hover:opacity-95 ${className}`}
       aria-label="Player Mindset Viagens"
     >
-      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 via-emerald-600 to-slate-950 flex items-center justify-center shadow-md shadow-emerald-500/20 ring-1 ring-emerald-400/40 group-hover:scale-105 transition-transform duration-200">
-        <Zap className="w-5 h-5 text-white fill-current" />
-      </div>
-      <div className="flex flex-col text-left">
-        <div className="flex items-center gap-1.5 leading-none">
-          <span className="text-base font-extrabold tracking-wider text-white font-heading uppercase">
-            Player Mindset
-          </span>
-          <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-            Viagens
-          </span>
-        </div>
-        <span className="text-[10px] text-slate-400 font-medium tracking-tight mt-0.5">
-          Logística esportiva de alta performance
-        </span>
+      {/* Official Logo Image from asset */}
+      <div className="relative flex items-center shrink-0">
+        <img
+          src={logoAsset}
+          alt="Player Mindset Viagens"
+          className={`${sizeClasses[size]} w-auto object-contain rounded-md filter contrast-105 group-hover:scale-[1.02] transition-transform duration-200`}
+        />
       </div>
     </Link>
   )

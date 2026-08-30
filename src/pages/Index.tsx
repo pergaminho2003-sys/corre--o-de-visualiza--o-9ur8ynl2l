@@ -6,6 +6,7 @@ import { ServicesSection } from '@/components/sections/ServicesSection'
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { DifferentialsSection } from '@/components/sections/DifferentialsSection'
+import { EssenceSection } from '@/components/sections/EssenceSection'
 import { FaqSection } from '@/components/sections/FaqSection'
 import { LeadFormSection } from '@/components/sections/LeadFormSection'
 import { getResults } from '@/services/results'
@@ -90,19 +91,22 @@ export default function Index() {
       {/* 4. Services Section */}
       <ServicesSection />
 
-      {/* 5. How It Works Section */}
+      {/* 5. Essence / Manifesto Section */}
+      <EssenceSection />
+
+      {/* 6. How It Works Section */}
       <HowItWorksSection />
 
-      {/* 6. Testimonials Section (dynamic + fallback) */}
+      {/* 7. Testimonials Section (dynamic + fallback) */}
       <TestimonialsSection testimonials={testimonials} />
 
-      {/* 7. Differentials Section */}
+      {/* 8. Differentials Section */}
       <DifferentialsSection />
 
-      {/* 8. FAQ Section */}
+      {/* 9. FAQ Section */}
       <FaqSection />
 
-      {/* 9. Lead Proposal Form Section */}
+      {/* 10. Lead Proposal Form Section */}
       <LeadFormSection />
     </div>
   )

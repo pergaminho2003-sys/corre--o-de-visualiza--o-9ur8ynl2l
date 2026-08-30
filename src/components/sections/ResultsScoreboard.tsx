@@ -102,13 +102,13 @@ export function ResultsScoreboard({ results = [] }: { results?: ResultRecord[] }
   const getIcon = (idx: number) => {
     switch (idx % 4) {
       case 0:
-        return <Trophy className="w-5 h-5 text-yellow-400" />
+        return <Trophy className="w-5 h-5 text-red-500" />
       case 1:
-        return <TrendingUp className="w-5 h-5 text-emerald-400" />
+        return <TrendingUp className="w-5 h-5 text-red-400" />
       case 2:
-        return <Users className="w-5 h-5 text-sky-400" />
+        return <Users className="w-5 h-5 text-slate-300" />
       default:
-        return <Award className="w-5 h-5 text-yellow-400" />
+        return <Award className="w-5 h-5 text-red-500" />
     }
   }
 
@@ -118,9 +118,9 @@ export function ResultsScoreboard({ results = [] }: { results?: ResultRecord[] }
       className="relative z-20 -mt-6 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
     >
       {/* Scoreboard Shell */}
-      <div className="bg-slate-900/95 border border-slate-800/90 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl ring-1 ring-emerald-500/20">
+      <div className="bg-slate-900/95 border border-slate-800/90 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl ring-1 ring-red-500/20">
         <div className="mb-6 flex flex-col items-center text-center">
-          <span className="text-xs uppercase font-bold tracking-widest text-emerald-400 mb-1">
+          <span className="text-xs uppercase font-bold tracking-widest text-red-500 mb-1">
             Placar de Resultados
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
@@ -134,16 +134,16 @@ export function ResultsScoreboard({ results = [] }: { results?: ResultRecord[] }
           {displayResults.map((item, idx) => (
             <div
               key={item.id || idx}
-              className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-5 text-center flex flex-col items-center justify-center hover:border-emerald-500/40 hover:bg-slate-950 transition-all duration-200 group"
+              className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-5 text-center flex flex-col items-center justify-center hover:border-red-500/40 hover:bg-slate-950 transition-all duration-200 group"
             >
               <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 {getIcon(idx)}
               </div>
 
               <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white font-heading tracking-tight flex items-center justify-center">
-                {item.prefix && <span className="text-emerald-400 mr-0.5">{item.prefix}</span>}
+                {item.prefix && <span className="text-red-500 mr-0.5">{item.prefix}</span>}
                 <CountUp endValue={item.metric_value} />
-                {item.suffix && <span className="text-yellow-400 ml-0.5">{item.suffix}</span>}
+                {item.suffix && <span className="text-red-400 ml-0.5">{item.suffix}</span>}
               </div>
 
               <p className="text-xs sm:text-sm text-slate-400 font-medium mt-2 leading-snug">

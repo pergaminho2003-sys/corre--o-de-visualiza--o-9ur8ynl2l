@@ -25,31 +25,31 @@ export function MarqueeStrip() {
 
       <div className="animate-marquee flex items-center whitespace-nowrap select-none">
         {/* First repetition */}
-        <div className="flex items-center gap-6 text-sm md:text-base font-bold uppercase tracking-wider text-emerald-400">
+        <div className="flex items-center gap-6 text-sm md:text-base font-bold uppercase tracking-wider text-red-400">
           {DESTINATIONS.map((city, i) => (
             <span key={`dest-1-${i}`} className="inline-flex items-center gap-6">
-              <span className="hover:text-yellow-400 transition-colors">{city}</span>
-              <span className="text-yellow-400/70 text-xs">★</span>
+              <span className="hover:text-white transition-colors">{city}</span>
+              <span className="text-red-600/80 text-xs">★</span>
             </span>
           ))}
         </div>
 
         {/* Second repetition for smooth seamless loop */}
-        <div className="flex items-center gap-6 text-sm md:text-base font-bold uppercase tracking-wider text-emerald-400 ml-6">
+        <div className="flex items-center gap-6 text-sm md:text-base font-bold uppercase tracking-wider text-red-400 ml-6">
           {DESTINATIONS.map((city, i) => (
             <span key={`dest-2-${i}`} className="inline-flex items-center gap-6">
-              <span className="hover:text-yellow-400 transition-colors">{city}</span>
-              <span className="text-yellow-400/70 text-xs">★</span>
+              <span className="hover:text-white transition-colors">{city}</span>
+              <span className="text-red-600/80 text-xs">★</span>
             </span>
           ))}
         </div>
 
         {/* Third repetition just in case on ultra-wide screens */}
-        <div className="flex items-center gap-6 text-sm md:text-base font-bold uppercase tracking-wider text-emerald-400 ml-6">
+        <div className="flex items-center gap-6 text-sm md:text-base font-bold uppercase tracking-wider text-red-400 ml-6">
           {DESTINATIONS.map((city, i) => (
             <span key={`dest-3-${i}`} className="inline-flex items-center gap-6">
-              <span className="hover:text-yellow-400 transition-colors">{city}</span>
-              <span className="text-yellow-400/70 text-xs">★</span>
+              <span className="hover:text-white transition-colors">{city}</span>
+              <span className="text-red-600/80 text-xs">★</span>
             </span>
           ))}
         </div>

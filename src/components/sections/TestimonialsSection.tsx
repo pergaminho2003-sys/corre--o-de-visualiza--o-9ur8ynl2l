@@ -75,7 +75,7 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
     <section id="depoimentos" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span className="text-xs uppercase font-bold tracking-widest text-emerald-400">
+        <span className="text-xs uppercase font-bold tracking-widest text-red-500">
           Casos de Sucesso
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
@@ -92,27 +92,27 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
         {/* Featured Testimonial Card */}
         {featuredItem && (
-          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 border border-emerald-500/30 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden ring-1 ring-emerald-500/20">
+          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 border border-red-500/30 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden ring-1 ring-red-500/20">
             {/* Background quote watermark */}
-            <Quote className="absolute -bottom-6 -right-6 w-44 h-44 text-emerald-500/5 pointer-events-none" />
+            <Quote className="absolute -bottom-6 -right-6 w-44 h-44 text-red-500/5 pointer-events-none" />
 
             <div>
               <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-1 text-yellow-400">
+                <div className="flex items-center gap-1 text-red-500">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400" />
+                    <Star key={i} className="w-4 h-4 fill-red-500" />
                   ))}
                 </div>
 
                 {featuredItem.highlight_metric && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold">
-                    <Award className="w-3.5 h-3.5 text-yellow-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold">
+                    <Award className="w-3.5 h-3.5 text-red-500" />
                     {featuredItem.highlight_metric}
                   </span>
                 )}
               </div>
 
-              <Quote className="w-10 h-10 text-emerald-400 mb-4 opacity-70" />
+              <Quote className="w-10 h-10 text-red-500 mb-4 opacity-70" />
 
               <blockquote className="text-lg sm:text-xl font-medium text-slate-100 leading-relaxed italic mb-8">
                 "{featuredItem.quote}"
@@ -120,14 +120,13 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
             </div>
 
             <div className="flex items-center gap-4 pt-6 border-t border-slate-800">
-              <div className="w-13 h-13 rounded-full bg-slate-950 border-2 border-emerald-400 text-emerald-400 font-bold flex items-center justify-center text-base shrink-0 shadow-md shadow-emerald-500/20">
+              <div className="w-13 h-13 rounded-full bg-slate-950 border-2 border-red-500 text-red-400 font-bold flex items-center justify-center text-base shrink-0 shadow-md shadow-red-500/20">
                 {getInitials(featuredItem.name)}
               </div>
               <div>
                 <h4 className="text-base font-bold text-white font-heading">{featuredItem.name}</h4>
                 <p className="text-xs text-slate-400">
-                  {featuredItem.role} •{' '}
-                  <span className="text-emerald-400">{featuredItem.club}</span>
+                  {featuredItem.role} • <span className="text-red-400">{featuredItem.club}</span>
                 </p>
               </div>
             </div>
@@ -143,13 +142,13 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1 text-yellow-400">
+                  <div className="flex items-center gap-1 text-red-500">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-yellow-400" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-red-500" />
                     ))}
                   </div>
                   {item.highlight_metric && (
-                    <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                    <span className="text-[11px] font-bold text-red-400 bg-red-500/10 px-2.5 py-0.5 rounded-full border border-red-500/20">
                       {item.highlight_metric}
                     </span>
                   )}
@@ -159,7 +158,7 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
               </div>
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-800/60">
-                <div className="w-9 h-9 rounded-full bg-slate-950 border border-slate-700 text-emerald-400 font-bold flex items-center justify-center text-xs shrink-0">
+                <div className="w-9 h-9 rounded-full bg-slate-950 border border-slate-700 text-red-400 font-bold flex items-center justify-center text-xs shrink-0">
                   {getInitials(item.name)}
                 </div>
                 <div>

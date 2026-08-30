@@ -10,6 +10,7 @@ interface HeaderProps {
 const NAV_ITEMS = [
   { label: 'Números', href: '#numeros' },
   { label: 'Experiências', href: '#experiencias' },
+  { label: 'Nossa Essência', href: '#essencia' },
   { label: 'Como funciona', href: '#como-funciona' },
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Diferenciais', href: '#diferenciais' },
@@ -67,12 +68,12 @@ export function Header({ activeSection = '' }: HeaderProps) {
                     handleNavClick(item.href)
                   }}
                   className={`text-sm font-medium transition-colors relative py-1 ${
-                    isActive ? 'text-emerald-400 font-semibold' : 'text-slate-300 hover:text-white'
+                    isActive ? 'text-red-500 font-semibold' : 'text-slate-300 hover:text-white'
                   }`}
                 >
                   {item.label}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-emerald-400 transition-transform duration-200 origin-left ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-red-600 transition-transform duration-200 origin-left ${
                       isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     }`}
                   />
@@ -85,7 +86,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
           <div className="hidden lg:flex items-center gap-4">
             <Button
               onClick={() => handleNavClick('#orcamento')}
-              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-lg shadow-emerald-500/25 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02]"
+              className="bg-red-600 hover:bg-red-500 text-white font-bold shadow-lg shadow-red-600/25 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02]"
             >
               Solicitar orçamento
               <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -99,7 +100,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
             className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none"
             aria-label="Abrir menu"
           >
-            {mobileOpen ? <X className="w-6 h-6 text-emerald-400" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? <X className="w-6 h-6 text-red-500" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </header>
@@ -136,7 +137,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
                       e.preventDefault()
                       handleNavClick(item.href)
                     }}
-                    className="text-lg font-medium text-slate-200 hover:text-emerald-400 py-1 transition-colors flex items-center justify-between"
+                    className="text-lg font-medium text-slate-200 hover:text-red-400 py-1 transition-colors flex items-center justify-between"
                   >
                     {item.label}
                     <ArrowUpRight className="w-4 h-4 text-slate-500" />
@@ -148,7 +149,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
             <div className="pt-6 border-t border-slate-800/80 space-y-3">
               <Button
                 onClick={() => handleNavClick('#orcamento')}
-                className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-6 rounded-xl shadow-lg shadow-emerald-500/20"
+                className="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-6 rounded-xl shadow-lg shadow-red-600/20"
               >
                 Solicitar orçamento
               </Button>

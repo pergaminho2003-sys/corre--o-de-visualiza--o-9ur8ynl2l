@@ -7,7 +7,7 @@ import { ErrorBoundary } from './ErrorBoundary'
 export default function Layout() {
   return (
     <ErrorBoundary>
-      <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-slate-950">
+      <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 selection:bg-red-600 selection:text-white">
         <Header />
         <main className="flex-1 w-full">
           <Outlet />
