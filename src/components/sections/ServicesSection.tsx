@@ -23,7 +23,7 @@ const SERVICES = [
   {
     icon: Headphones,
     title: 'Suporte e assessoria jurídica',
-    description: 'Acompanhamento integral e suporte jurídico para delegações',
+    description: 'Acompanhamento e resolução de problemas',
     tag: 'Plantão VIP',
   },
 ]
