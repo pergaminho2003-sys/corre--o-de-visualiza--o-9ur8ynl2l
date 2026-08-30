@@ -1,19 +1,17 @@
-import { Plane, Car, ShieldCheck, Headphones, ArrowRight } from 'lucide-react'
+import { Plane, Car, ShieldCheck, Headphones } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const SERVICES = [
   {
     icon: Plane,
     title: 'Passagens & Hospedagens',
-    description:
-      'Emissão de passagens aéreas para grupos e reservas de hospedagens selecionadas com foco em conforto e logística.',
+    description: 'Voos para grupos e hotéis com foco em conforto e logística',
     tag: 'Logística Total',
   },
   {
     icon: Car,
     title: 'Locação de veículos / translado',
-    description:
-      'Veículos reservados para deslocamento de atletas, comissão técnica e dirigentes durante a viagem, com flexibilidade de horários e rotas.',
+    description: 'Translados e veículos dedicados para atletas e comissão',
     tag: 'Mobilidade Local',
   },
   {
@@ -25,8 +23,7 @@ const SERVICES = [
   {
     icon: Headphones,
     title: 'Suporte e assessoria jurídica',
-    description:
-      'Acompanhamento completo durante toda a viagem, com nossa equipe bilíngue sempre disponível presencialmente ou por plantão.',
+    description: 'Acompanhamento integral e suporte jurídico para delegações',
     tag: 'Plantão VIP',
   },
 ]
@@ -82,11 +79,6 @@ export function ServicesSection() {
                 </h3>
 
                 <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
-              </div>
-
-              <div className="pt-6 mt-4 border-t border-slate-800/60 flex items-center text-xs font-semibold text-red-400 group-hover:text-red-300">
-                <span className="group-hover:mr-2 transition-all">Consulte personalização</span>
-                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </div>
           )
