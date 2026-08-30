@@ -1,5 +1,4 @@
 import { Plane, Car, ShieldCheck, Headphones } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 const SERVICES = [
   {
@@ -29,13 +28,6 @@ const SERVICES = [
 ]
 
 export function ServicesSection() {
-  const scrollToForm = () => {
-    const el = document.querySelector('#orcamento')
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section id="experiencias" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
       {/* Section Header */}
@@ -83,17 +75,6 @@ export function ServicesSection() {
             </div>
           )
         })}
-      </div>
-
-      {/* Action banner */}
-      <div className="mt-12 text-center">
-        <Button
-          onClick={scrollToForm}
-          variant="outline"
-          className="border-slate-800 hover:border-red-500/40 text-slate-300 hover:text-white bg-slate-900/40 hover:bg-slate-900 px-6 py-5 rounded-xl text-sm"
-        >
-          Precisa de um roteiro especial para amistosos ou torneio oficial? Fale com a gente
-        </Button>
       </div>
     </section>
   )
