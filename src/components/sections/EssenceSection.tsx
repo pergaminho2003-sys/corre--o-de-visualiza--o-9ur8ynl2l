@@ -79,13 +79,6 @@ export function EssenceSection() {
               nasceu da experiência direta da fundadora com o esporte, a paixão por viagens
               <span>&nbsp;e a vivência como atleta.</span>
             </p>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Esse histórico moldou um conhecimento profundo da{' '}
-              <strong className="text-slate-200 font-semibold">rotina rigorosa</strong>, da{' '}
-              <strong className="text-slate-200 font-semibold">urgência de resultados</strong> e das
-              particularidades que apenas quem viveu viagens esportivas de alto rendimento consegue
-              compreender e antecipar.
-            </p>
           </div>
 
           {/* Highlights Mini Grid */}
