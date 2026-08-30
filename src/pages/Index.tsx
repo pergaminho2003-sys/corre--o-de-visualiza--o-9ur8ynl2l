@@ -7,6 +7,7 @@ import { HowItWorksSection } from '@/components/sections/HowItWorksSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { DifferentialsSection } from '@/components/sections/DifferentialsSection'
 import { EssenceSection } from '@/components/sections/EssenceSection'
+import { PartnershipProposalSection } from '@/components/sections/PartnershipProposalSection'
 import { FaqSection } from '@/components/sections/FaqSection'
 import { LeadFormSection } from '@/components/sections/LeadFormSection'
 import { getResults } from '@/services/results'
@@ -97,16 +98,19 @@ export default function Index() {
       {/* 6. How It Works Section */}
       <HowItWorksSection />
 
-      {/* 7. Testimonials Section (dynamic + fallback) */}
+      {/* 7. Partnership Proposal Section (Proposta de Parceria comercial) */}
+      <PartnershipProposalSection />
+
+      {/* 8. Testimonials Section (dynamic + fallback) */}
       <TestimonialsSection testimonials={testimonials} />
 
-      {/* 8. Differentials Section */}
+      {/* 9. Differentials Section */}
       <DifferentialsSection />
 
-      {/* 9. FAQ Section */}
+      {/* 10. FAQ Section */}
       <FaqSection />
 
-      {/* 10. Lead Proposal Form Section */}
+      {/* 11. Lead Proposal Form Section */}
       <LeadFormSection />
     </div>
   )

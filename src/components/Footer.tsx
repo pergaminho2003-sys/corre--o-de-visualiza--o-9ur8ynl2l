@@ -128,6 +128,14 @@ export function Footer() {
               </li>
               <li>
                 <button
+                  onClick={() => scrollToSection('#proposta-parceria')}
+                  className="text-slate-400 hover:text-red-400 transition-colors"
+                >
+                  Proposta de Parceria
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => scrollToSection('#depoimentos')}
                   className="text-slate-400 hover:text-red-400 transition-colors"
                 >

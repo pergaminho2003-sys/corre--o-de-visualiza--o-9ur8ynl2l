@@ -27,11 +27,29 @@ export function LeadFormSection() {
     estimated_trips: '1-10',
     message: '',
   })
+  const [preferredMeeting, setPreferredMeeting] = useState<'presencial' | 'online' | 'indiferente'>(
+    'indiferente',
+  )
 
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
+
+  // Listen for custom meeting selection from other sections (e.g., PartnershipProposalSection)
+  React.useEffect(() => {
+    const handleMeetingSelection = (e: Event) => {
+      const customEvent = e as CustomEvent<{ type?: 'presencial' | 'online' }>
+      if (customEvent.detail?.type) {
+        setPreferredMeeting(customEvent.detail.type)
+      }
+    }
+
+    window.addEventListener('pmv:select-meeting-type', handleMeetingSelection)
+    return () => {
+      window.removeEventListener('pmv:select-meeting-type', handleMeetingSelection)
+    }
+  }, [])
 
   const validateForm = () => {
     const errors: Record<string, string> = {}
@@ -68,13 +86,23 @@ export function LeadFormSection() {
 
     setLoading(true)
     try {
+      // Append preferred meeting type to message cleanly if specified
+      let finalMessage = formData.message?.trim() || ''
+      if (preferredMeeting === 'presencial') {
+        const meetingNote = '[SOLICITAÇÃO DE REUNIÃO PRESENCIAL NO CLUBE]'
+        finalMessage = finalMessage ? `${meetingNote}\n${finalMessage}` : meetingNote
+      } else if (preferredMeeting === 'online') {
+        const meetingNote = '[PREFERÊNCIA: REUNIÃO ONLINE / APRESENTAÇÃO VIRTUAL]'
+        finalMessage = finalMessage ? `${meetingNote}\n${finalMessage}` : meetingNote
+      }
+
       await createLead({
         club_name: formData.club_name.trim(),
         contact_name: formData.contact_name.trim(),
         email: formData.email.trim(),
         phone: formData.phone.trim(),
         estimated_trips: formData.estimated_trips,
-        message: formData.message?.trim() || '',
+        message: finalMessage,
       })
       setSuccess(true)
     } catch (err: any) {
@@ -105,6 +133,7 @@ export function LeadFormSection() {
       estimated_trips: '1-10',
       message: '',
     })
+    setPreferredMeeting('indiferente')
     setFieldErrors({})
     setErrorMessage(null)
     setSuccess(false)
@@ -374,24 +403,80 @@ export function LeadFormSection() {
                   )}
                 </div>
 
+                {/* Formato de atendimento / Reunião preferencial */}
+                <div className="space-y-2 pt-1">
+                  <Label className="text-xs font-bold text-slate-800 uppercase tracking-wider block">
+                    Como prefere iniciar a conversa?
+                  </Label>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setPreferredMeeting('presencial')}
+                      className={`px-3 py-2.5 rounded-xl border text-xs font-bold transition-all text-left flex items-center justify-between ${
+                        preferredMeeting === 'presencial'
+                          ? 'bg-red-50 border-red-500 text-red-700 ring-2 ring-red-500/20'
+                          : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                    >
+                      <span>🏢 Reunião presencial</span>
+                      {preferredMeeting === 'presencial' && (
+                        <span className="w-2 h-2 rounded-full bg-red-600" />
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setPreferredMeeting('online')}
+                      className={`px-3 py-2.5 rounded-xl border text-xs font-bold transition-all text-left flex items-center justify-between ${
+                        preferredMeeting === 'online'
+                          ? 'bg-red-50 border-red-500 text-red-700 ring-2 ring-red-500/20'
+                          : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                    >
+                      <span>💻 Reunião online</span>
+                      {preferredMeeting === 'online' && (
+                        <span className="w-2 h-2 rounded-full bg-red-600" />
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setPreferredMeeting('indiferente')}
+                      className={`px-3 py-2.5 rounded-xl border text-xs font-bold transition-all text-left flex items-center justify-between ${
+                        preferredMeeting === 'indiferente'
+                          ? 'bg-red-50 border-red-500 text-red-700 ring-2 ring-red-500/20'
+                          : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                    >
+                      <span>📄 Receber proposta</span>
+                      {preferredMeeting === 'indiferente' && (
+                        <span className="w-2 h-2 rounded-full bg-red-600" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+
                 {/* Mensagem */}
                 <div className="space-y-1.5">
                   <Label
                     htmlFor="message"
                     className="text-xs font-bold text-slate-800 uppercase tracking-wider"
                   >
-                    Detalhes do torneio ou viagem (opcional)
+                    Detalhes do clube, torneios previstos ou preferências (opcional)
                   </Label>
                   <Textarea
                     id="message"
                     rows={3}
-                    placeholder="Conte sobre o destino pretendido, número previsto de atletas/comissão técnica e datas estimadas..."
+                    placeholder={
+                      preferredMeeting === 'presencial'
+                        ? 'Informe o local da sede/CT onde prefere realizar a reunião e melhores datas/horários...'
+                        : 'Conte sobre o calendário de competições, número previsto de atletas/comissão técnica e datas estimadas...'
+                    }
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="bg-slate-50 border-slate-300 text-slate-900 focus-visible:ring-red-500 resize-none"
                   />
                 </div>
-
                 {/* Submit Button */}
                 <Button
                   type="submit"

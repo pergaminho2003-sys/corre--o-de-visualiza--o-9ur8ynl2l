@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { label: 'Experiências', href: '#experiencias' },
   { label: 'Nossa Essência', href: '#essencia' },
   { label: 'Como funciona', href: '#como-funciona' },
+  { label: 'Parceria', href: '#proposta-parceria' },
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Diferenciais', href: '#diferenciais' },
   { label: 'FAQ', href: '#faq' },
