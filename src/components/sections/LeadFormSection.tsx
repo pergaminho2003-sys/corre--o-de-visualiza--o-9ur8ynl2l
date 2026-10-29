@@ -190,36 +190,6 @@ export function LeadFormSection() {
               </div>
             </div>
           </div>
-
-          {/* Quick contact rows */}
-          <div className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
-              Prefere falar agora com um consultor?
-            </span>
-
-            <a
-              href={`https://wa.me/${APP_CONSTANTS.WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                APP_CONSTANTS.WHATSAPP_DEFAULT_MESSAGE,
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between p-3.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 font-semibold text-sm transition-colors group"
-            >
-              <div className="flex items-center gap-2.5">
-                <MessageCircle className="w-5 h-5 text-red-500" />
-                <span>Fale direto no WhatsApp</span>
-              </div>
-              <span className="text-xs bg-red-500/20 px-2 py-0.5 rounded text-red-300">Online</span>
-            </a>
-
-            <a
-              href={`mailto:${APP_CONSTANTS.CONTACT_EMAIL}`}
-              className="flex items-center gap-2.5 p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white font-medium text-sm transition-colors"
-            >
-              <Mail className="w-4 h-4 text-slate-400" />
-              <span>{APP_CONSTANTS.CONTACT_EMAIL}</span>
-            </a>
-          </div>
         </div>
 
         {/* Right Column: Match Ticket Form Card */}
@@ -501,6 +471,40 @@ export function LeadFormSection() {
                 </p>
               </form>
             )}
+          </div>
+        </div>
+      </div>
+
+      {/* Quick contact block moved below the sports proposal form */}
+      <div className="mt-12 max-w-2xl mx-auto">
+        <div className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block text-center sm:text-left">
+            Prefere falar agora com um consultor?
+          </span>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a
+              href={`https://wa.me/${APP_CONSTANTS.WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                APP_CONSTANTS.WHATSAPP_DEFAULT_MESSAGE,
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-3.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 font-semibold text-sm transition-colors group"
+            >
+              <div className="flex items-center gap-2.5">
+                <MessageCircle className="w-5 h-5 text-red-500" />
+                <span>Fale direto no WhatsApp</span>
+              </div>
+              <span className="text-xs bg-red-500/20 px-2 py-0.5 rounded text-red-300">Online</span>
+            </a>
+
+            <a
+              href={`mailto:${APP_CONSTANTS.CONTACT_EMAIL}`}
+              className="flex items-center justify-center sm:justify-start gap-2.5 p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white font-medium text-sm transition-colors"
+            >
+              <Mail className="w-4 h-4 text-slate-400" />
+              <span>{APP_CONSTANTS.CONTACT_EMAIL}</span>
+            </a>
           </div>
         </div>
       </div>
