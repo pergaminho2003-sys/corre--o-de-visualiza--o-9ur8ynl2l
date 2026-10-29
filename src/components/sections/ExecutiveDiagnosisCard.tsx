@@ -35,12 +35,11 @@ export function ExecutiveDiagnosisCard() {
           </h3>
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Solicite uma reunião com nossos diretores de logística esportiva —{' '}
+            Solicite uma reunião com nossos diretores de logística —{' '}
             <strong className="text-white font-semibold">
               inclusive presencial na sede do seu clube ou centro de treinamento
             </strong>{' '}
-            — para mapear o calendário de viagens, entender suas demandas e apresentar um estudo
-            exclusivo de economia.
+            — para mapear o calendário de viagens e entender suas demandas&nbsp;
           </p>
 
           {/* CTAs */}
@@ -73,10 +72,6 @@ export function ExecutiveDiagnosisCard() {
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-red-400" />
               <span>Resposta e agendamento em até 24 horas</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-red-500" />
-              <span>Disponibilidade para viagens de diretoria em todo o Brasil</span>
             </div>
           </div>
         </div>
