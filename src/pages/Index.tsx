@@ -9,6 +9,7 @@ import { DifferentialsSection } from '@/components/sections/DifferentialsSection
 import { EssenceSection } from '@/components/sections/EssenceSection'
 import { PartnershipProposalSection } from '@/components/sections/PartnershipProposalSection'
 import { FaqSection } from '@/components/sections/FaqSection'
+import { ExecutiveDiagnosisCard } from '@/components/sections/ExecutiveDiagnosisCard'
 import { LeadFormSection } from '@/components/sections/LeadFormSection'
 import { getResults } from '@/services/results'
 import { getTestimonials } from '@/services/testimonials'
@@ -110,7 +111,10 @@ export default function Index() {
       {/* 10. FAQ Section */}
       <FaqSection />
 
-      {/* 11. Lead Proposal Form Section */}
+      {/* 11. Executive Diagnosis & Meeting Card (imediatamente antes do formulário) */}
+      <ExecutiveDiagnosisCard />
+
+      {/* 12. Lead Proposal Form Section */}
       <LeadFormSection />
     </div>
   )

@@ -29,6 +29,38 @@ const FAQS = [
 ]
 
 export function FaqSection() {
-  return
-  null
+  return (
+    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1000px] mx-auto">
+      {/* Section Header */}
+      <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span className="text-xs uppercase font-bold tracking-widest text-red-500">
+          Tire suas dúvidas
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+          Perguntas Frequentes
+        </h2>
+        <div className="sprint-line mx-auto" />
+        <p className="text-slate-400 text-sm sm:text-base pt-2">
+          Respostas claras sobre processos, faturamento, documentação e contratos esportivos.
+        </p>
+      </div>
+
+      <Accordion type="single" collapsible className="w-full space-y-4">
+        {FAQS.map((faq, index) => (
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="border border-slate-800 bg-slate-900/60 rounded-2xl px-6 data-[state=open]:border-red-500/40 data-[state=open]:bg-slate-900/90 transition-all"
+          >
+            <AccordionTrigger className="text-left font-bold text-white hover:text-red-400 py-5 text-sm sm:text-base">
+              {faq.q}
+            </AccordionTrigger>
+            <AccordionContent className="text-slate-300 text-xs sm:text-sm leading-relaxed pb-5">
+              {faq.a}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </section>
+  )
 }
