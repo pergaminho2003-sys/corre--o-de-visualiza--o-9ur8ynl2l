@@ -150,9 +150,6 @@ export function LeadFormSection() {
           Solicite seu orçamento
         </h2>
         <div className="sprint-line mx-auto" />
-        <p className="text-slate-400 text-sm sm:text-base pt-2">
-          Preencha os dados do clube e receba uma proposta personalizada em até 48 horas.
-        </p>
       </div>
 
       {/* Two-column layout: Context left, Match Ticket form right */}
