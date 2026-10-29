@@ -20,7 +20,7 @@ const STEPS = [
     icon: Trophy,
     title: 'É só entrar em campo',
     description:
-      'Cuidamos do embarque de menores de idade — autorizações e documentação — com suporte jurídico dedicado para qualquer imprevisto.',
+      'Acompanhamento integral do serviço e suporte jurídico dedicado para resolver qualquer imprevisto durante a viagem.',
     highlight: 'Suporte presencial e 24/7',
   },
 ]
