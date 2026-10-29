@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-5-74466.png'
+import { RedWingLogo } from '@/components/RedWingLogo'
 import { Button } from '@/components/ui/button'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 
@@ -59,12 +59,12 @@ export function Header({ activeSection = '' }: HeaderProps) {
             className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl py-0.5"
             aria-label="Player Mindset Viagens - Início"
           >
-            {/* Logo da marca no cabeçalho: recorte circular com fundo branco original mantido (64px desktop / 48px mobile) */}
-            <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md shadow-black/20 group-hover:scale-105 transition-transform duration-200">
-              <img
+            {/* Logo da marca no cabeçalho: apenas a asa vermelha sobre fundo transparente, sem círculo e sem fundo branco */}
+            <div className="relative shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+              <RedWingLogo
                 src="/visual-edits/sem-nome-851-x-310-px-logotipo-8-19a473f0.png"
                 alt="Player Mindset Viagens"
-                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full object-cover"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain drop-shadow-[0_2px_8px_rgba(196,39,39,0.3)]"
                 loading="eager"
               />
             </div>
@@ -148,11 +148,11 @@ export function Header({ activeSection = '' }: HeaderProps) {
                   className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
                   aria-label="Player Mindset Viagens - Início"
                 >
-                  <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md shadow-black/20">
-                    <img
-                      src={roundHeaderLogoAsset}
+                  <div className="relative shrink-0 flex items-center justify-center">
+                    <RedWingLogo
+                      src="/visual-edits/sem-nome-851-x-310-px-logotipo-8-19a473f0.png"
                       alt="Player Mindset Viagens"
-                      className="h-12 w-12 rounded-full object-cover"
+                      className="h-12 w-12 object-contain drop-shadow-[0_2px_8px_rgba(196,39,39,0.3)]"
                       loading="eager"
                     />
                   </div>
