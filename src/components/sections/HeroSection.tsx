@@ -36,16 +36,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
         {/* Centered Brand Mark / Logo - Hero Main Spotlight */}
         <div className="mb-6 sm:mb-8 flex flex-col items-center justify-center relative group">
-          {/* Ambient red halo ring around the logo */}
-
-          {/* Badge pill right below the logo */}
-          <div className="mt-4 sm:mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
-            </span>
-            <span>Viagens de alta performance esportiva</span>
-          </div>
+          <Logo size="hero" containerVariant="hero" showGlow asLink={false} />
         </div>
 
         {/* Content Block Below Logo */}
