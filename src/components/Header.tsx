@@ -61,12 +61,12 @@ export function Header({ activeSection = '' }: HeaderProps) {
             className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl py-0.5"
             aria-label="Player Mindset Viagens - Início"
           >
-            {/* Logo redonda da marca: fundo externo 100% transparente (sem cantos/retângulos), círculo branco, asa vermelha e texto preservados e ampliada */}
-            <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden shadow-lg shadow-black/40 group-hover:scale-105 transition-transform duration-200">
+            {/* Logo da marca no cabeçalho: fundo e círculo branco removidos para os elementos ficarem diretamente sobre o fundo do site */}
+            <div className="relative shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <img
                 src={processedSrc}
                 alt="Player Mindset Viagens"
-                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain rounded-full"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain"
                 loading="eager"
               />
             </div>
@@ -150,11 +150,11 @@ export function Header({ activeSection = '' }: HeaderProps) {
                   className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
                   aria-label="Player Mindset Viagens - Início"
                 >
-                  <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden shadow-lg shadow-black/40">
+                  <div className="relative shrink-0 flex items-center justify-center">
                     <img
                       src={processedSrc}
                       alt="Player Mindset Viagens"
-                      className="h-12 w-12 object-contain rounded-full"
+                      className="h-12 w-12 object-contain"
                       loading="eager"
                     />
                   </div>
