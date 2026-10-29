@@ -29,6 +29,5 @@ const FAQS = [
 ]
 
 export function FaqSection() {
-  return
-  null
+  return null
 }

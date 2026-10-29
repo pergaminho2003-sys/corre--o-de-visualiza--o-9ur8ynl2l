@@ -40,6 +40,5 @@ const DIFFERENTIALS = [
 ]
 
 export function DifferentialsSection() {
-  return
-  null
+  return null
 }
