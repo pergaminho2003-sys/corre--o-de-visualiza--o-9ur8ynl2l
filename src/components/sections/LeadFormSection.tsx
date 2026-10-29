@@ -158,7 +158,7 @@ export function LeadFormSection() {
             <div className="border-b-2 border-dashed border-slate-300 pb-6 mb-8 flex items-center justify-between">
               <div>
                 <span className="text-[11px] font-black uppercase tracking-widest text-red-600 block">
-                  FORMULÁRIO DE PROPOSTA ESPORTIVA
+                  FORMULÁRIO DE PROPOSTA
                 </span>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 font-heading">
                   Passe de Embarque
@@ -364,21 +364,6 @@ export function LeadFormSection() {
                     >
                       <span>💻 Reunião online</span>
                       {preferredMeeting === 'online' && (
-                        <span className="w-2 h-2 rounded-full bg-red-600" />
-                      )}
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setPreferredMeeting('indiferente')}
-                      className={`px-3 py-2.5 rounded-xl border text-xs font-bold transition-all text-left flex items-center justify-between ${
-                        preferredMeeting === 'indiferente'
-                          ? 'bg-red-50 border-red-500 text-red-700 ring-2 ring-red-500/20'
-                          : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300'
-                      }`}
-                    >
-                      <span>📄 Receber proposta</span>
-                      {preferredMeeting === 'indiferente' && (
                         <span className="w-2 h-2 rounded-full bg-red-600" />
                       )}
                     </button>
