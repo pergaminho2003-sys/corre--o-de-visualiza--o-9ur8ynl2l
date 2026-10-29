@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-3-91fb8.png'
+import { useTransparentRoundLogo } from '@/hooks/use-transparent-round-logo'
 import { Button } from '@/components/ui/button'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 
@@ -21,6 +22,7 @@ const NAV_ITEMS = [
 export function Header({ activeSection = '' }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { processedSrc } = useTransparentRoundLogo(roundHeaderLogoAsset)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,31 +51,31 @@ export function Header({ activeSection = '' }: HeaderProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-black/20'
-            : 'bg-transparent py-5'
+            ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 py-2 sm:py-2.5 shadow-lg shadow-black/20'
+            : 'bg-transparent py-4 sm:py-5'
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <Link
             to="/"
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
+            className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl py-0.5"
             aria-label="Player Mindset Viagens - Início"
           >
-            {/* Logo redonda original enviada pelo usuário (círculo branco com asa vermelha e tipografia original) */}
-            <div className="relative shrink-0 flex items-center justify-center p-0.5 rounded-full shadow-md shadow-black/40 group-hover:scale-105 transition-transform duration-200">
+            {/* Logo redonda da marca: fundo externo 100% transparente (sem cantos/retângulos), círculo branco, asa vermelha e texto preservados e ampliada */}
+            <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden shadow-lg shadow-black/40 group-hover:scale-105 transition-transform duration-200">
               <img
-                src={roundHeaderLogoAsset}
+                src={processedSrc}
                 alt="Player Mindset Viagens"
-                className="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain rounded-full"
                 loading="eager"
               />
             </div>
             {/* Wordmark no cabeçalho */}
             <div className="flex flex-col leading-tight select-none">
-              <span className="text-sm sm:text-base font-extrabold tracking-tight text-white font-heading">
+              <span className="text-base sm:text-lg md:text-xl font-extrabold tracking-tight text-white font-heading">
                 PLAYER <span className="text-red-500">MINDSET</span>
               </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
+              <span className="text-[11px] sm:text-xs font-semibold tracking-wider text-slate-400 uppercase">
                 Viagens
               </span>
             </div>
@@ -148,19 +150,19 @@ export function Header({ activeSection = '' }: HeaderProps) {
                   className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
                   aria-label="Player Mindset Viagens - Início"
                 >
-                  <div className="relative shrink-0 flex items-center justify-center p-0.5 rounded-full shadow-md shadow-black/40">
+                  <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden shadow-lg shadow-black/40">
                     <img
-                      src={roundHeaderLogoAsset}
+                      src={processedSrc}
                       alt="Player Mindset Viagens"
-                      className="h-10 w-10 object-contain rounded-full"
+                      className="h-12 w-12 object-contain rounded-full"
                       loading="eager"
                     />
                   </div>
                   <div className="flex flex-col leading-tight select-none">
-                    <span className="text-sm font-extrabold tracking-tight text-white font-heading">
+                    <span className="text-base font-extrabold tracking-tight text-white font-heading">
                       PLAYER <span className="text-red-500">MINDSET</span>
                     </span>
-                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
+                    <span className="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
                       Viagens
                     </span>
                   </div>
