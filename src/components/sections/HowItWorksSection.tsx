@@ -13,7 +13,7 @@ const STEPS = [
     icon: MapPinned,
     title: 'Elaboramos as estratégias e condições de pagamento',
     description:
-      'Criamos o roteiro completo personalizado: passagens em grupo, hotéis com dieta especial para atletas, centros de treinamento e seguro completo.',
+      'Elaboramos as estratégias conforme a demanda do ano do clube e negociamos as melhores condições de faturamento.',
     highlight: 'Planejamento 100% sob medida',
   },
   {
