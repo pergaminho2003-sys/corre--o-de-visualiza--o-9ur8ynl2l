@@ -1,5 +1,6 @@
 import { APP_CONSTANTS } from '@/config/constants'
 import { Button } from '@/components/ui/button'
+import { Logo } from '@/components/Logo'
 import { ArrowUpRight, ChevronDown, Compass, Shield, Award } from 'lucide-react'
 
 export function HeroSection() {
@@ -11,7 +12,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
+    <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20">
       {/* Background Stadium Photo with Ken Burns */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
@@ -21,40 +22,51 @@ export function HeroSection() {
           loading="eager"
         />
         {/* Layered overlays: gradient fade, radial spotlight, dark wash */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40" />
-        <div className="absolute inset-0 bg-radial-vignette opacity-70" />
-        <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
-        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-slate-800/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-slate-950/50" />
+        <div className="absolute inset-0 bg-radial-vignette opacity-75" />
+        {/* Subtle brand red central glow behind the centered logo */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[550px] sm:h-[750px] bg-red-600/18 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-slate-800/20 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-[radial-gradient(#c42727_1px,transparent_1px)] [background-size:24px_24px]" />
 
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center">
-        <div className="max-w-[720px] space-y-6 text-left">
-          {/* Brand Mark & Pill Badge */}
-          <div className="flex flex-wrap items-center gap-3">
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-2xl bg-slate-950/80 border border-slate-800/90 shadow-lg shadow-black/40 backdrop-blur-md">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
-              </span>
-              <span className="text-xs font-extrabold uppercase tracking-wider text-slate-200 font-heading">
-                Player Mindset Viagens
-              </span>
-            </div>
+      {/* Hero Content - Centered Layout */}
+      <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
+        {/* Centered Brand Mark / Logo - Hero Main Spotlight */}
+        <div className="mb-6 sm:mb-8 flex flex-col items-center justify-center relative group">
+          {/* Ambient red halo ring around the logo */}
+          <div
+            className="absolute -inset-4 sm:-inset-8 rounded-full bg-gradient-to-b from-red-600/20 via-red-600/5 to-transparent blur-2xl pointer-events-none"
+            aria-hidden="true"
+          />
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
-              <span>Viagens de alta performance esportiva</span>
-            </div>
+          <Logo
+            size="hero"
+            containerVariant="hero"
+            asLink={false}
+            showGlow={true}
+            className="transition-transform duration-300 hover:scale-[1.02]"
+          />
+
+          {/* Badge pill right below the logo */}
+          <div className="mt-4 sm:mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
+            </span>
+            <span>Viagens de alta performance esportiva</span>
           </div>
+        </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] font-heading uppercase">
-            Transforme viagens em{' '}
+        {/* Content Block Below Logo */}
+        <div className="max-w-[840px] space-y-6 flex flex-col items-center">
+          {/* Headline - "Seu clube foca no jogo. A gente cuida da viagem." / "Transforme viagens em vitórias" */}
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading uppercase">
+            Seu clube foca no jogo.{' '}
             <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
-              vitórias
+              A gente cuida da viagem.
             </span>
           </h1>
 
@@ -65,7 +77,7 @@ export function HeroSection() {
           </p>
 
           {/* CTAs */}
-          <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto">
             <Button
               onClick={() => scrollTo('#orcamento')}
               className="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-6 rounded-xl text-base shadow-xl shadow-red-600/30 transition-transform duration-200 hover:scale-[1.02] flex items-center justify-center gap-2"
@@ -85,16 +97,16 @@ export function HeroSection() {
           </div>
 
           {/* Quick trust badges */}
-          <div className="pt-6 border-t border-slate-800/60 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-slate-400">
-            <div className="flex items-center gap-2">
+          <div className="pt-6 sm:pt-8 border-t border-slate-800/60 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 text-xs text-slate-400 w-full max-w-2xl">
+            <div className="flex items-center justify-center gap-2">
               <Shield className="w-4 h-4 text-red-500 shrink-0" />
               <span>Logística 100% blindada</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <Award className="w-4 h-4 text-red-400 shrink-0" />
               <span>Agilidade e condições especiais</span>
             </div>
-            <div className="hidden sm:flex items-center gap-2">
+            <div className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
               <span>Plantão 24/7 na viagem</span>
             </div>
