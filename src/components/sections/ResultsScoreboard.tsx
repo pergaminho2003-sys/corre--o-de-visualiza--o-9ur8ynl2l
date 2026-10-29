@@ -37,7 +37,7 @@ const FALLBACK_RESULTS: ResultRecord[] = [
   },
   {
     id: 'ho7q08ui3m45db8',
-    metric_value: 98,
+    metric_value: 100,
     prefix: '',
     suffix: '%',
     label: 'de satisfação dos coordenadores',
