@@ -1,1 +1,1 @@
-export const noop = true
+export {}
