@@ -12,8 +12,7 @@ const STEPS = [
     step: '02',
     icon: MapPinned,
     title: 'Elaboramos as estratégias e condições de pagamento',
-    description:
-      'Elaboramos as estratégias conforme a demanda do ano do clube e negociamos as melhores condições de faturamento.',
+    description: 'Planejamento anual sob medida, com condições negociadas para o caixa do clube.',
     highlight: 'Planejamento 100% sob medida',
   },
   {
