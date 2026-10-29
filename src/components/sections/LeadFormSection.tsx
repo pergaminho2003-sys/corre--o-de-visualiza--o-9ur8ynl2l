@@ -142,51 +142,13 @@ export function LeadFormSection() {
   return (
     <section id="orcamento" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
       {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span className="text-xs uppercase font-bold tracking-widest text-red-500">
-          Atendimento Direto
-        </span>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          Solicite seu orçamento
-        </h2>
-        <div className="sprint-line mx-auto" />
-      </div>
+      <div className="text-center max-w-2xl mx-auto mb-16 space-y-3"></div>
 
       {/* Two-column layout: Context left, Match Ticket form right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         {/* Left Column: Context & Direct Contact */}
         <div className="lg:col-span-5 space-y-8">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-extrabold text-white font-heading">
-              A melhor logística para o seu elenco disputar qualquer troféu
-            </h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Elimine o desgaste com cotações intermináveis e riscos de cancelamento. Nossa equipe
-              centraliza passagens em grupo, hospedagem esportiva e traslados com tarifa negociada.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-900/70 border border-slate-800">
-              <Clock className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-              <div>
-                <h4 className="text-sm font-bold text-white">Retorno Rápido</h4>
-                <p className="text-xs text-slate-400">
-                  Proposta detalhada e estudo de viabilidade em até 48h úteis.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-900/70 border border-slate-800">
-              <ShieldCheck className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-              <div>
-                <h4 className="text-sm font-bold text-white">Sem Taxas Ocultas</h4>
-                <p className="text-xs text-slate-400">
-                  Transparência total em faturas mensais e contratos homologados.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="space-y-4"></div>
         </div>
 
         {/* Right Column: Match Ticket Form Card */}
