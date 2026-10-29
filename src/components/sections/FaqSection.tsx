@@ -29,6 +29,38 @@ const FAQS = [
 ]
 
 export function FaqSection() {
-  return
-  null
+  return (
+    <section id="faq" className="py-20 bg-slate-950 border-t border-slate-900">
+      <div className="max-w-[840px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <span className="text-red-500 text-xs uppercase tracking-widest font-bold">
+            Tire suas dúvidas
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
+            Perguntas Frequentes
+          </h2>
+          <p className="text-slate-400 text-sm sm:text-base mt-2">
+            Principais questões sobre nossa logística esportiva internacional.
+          </p>
+        </div>
+
+        <Accordion type="single" collapsible className="space-y-4">
+          {FAQS.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border border-slate-800 rounded-xl px-5 bg-slate-900/40"
+            >
+              <AccordionTrigger className="text-white hover:text-red-400 font-semibold text-left py-4 hover:no-underline">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-400 text-sm leading-relaxed pb-4">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  )
 }

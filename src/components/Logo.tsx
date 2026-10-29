@@ -10,6 +10,8 @@ interface LogoProps {
   containerVariant?: 'header' | 'footer' | 'card' | 'ghost' | 'hero'
   asLink?: boolean
   showGlow?: boolean
+  customSrc?: string
+  alt?: string
 }
 
 export function Logo({
@@ -19,10 +21,13 @@ export function Logo({
   containerVariant = 'header',
   asLink = true,
   showGlow = false,
+  customSrc,
+  alt = 'Player Mindset Viagens',
 }: LogoProps) {
-  // Process the asset to ensure white background is 100% removed
-  // and typography is rendered crisply in white over dark backgrounds
+  // For header and footer, keep existing treated logoAsset.
+  // When customSrc is provided, use it directly (or keep original colors).
   const { processedSrc } = useTransparentLogo(logoAsset, { brightenText: true })
+  const imageSrc = customSrc || processedSrc
 
   // Size presets for image height
   const sizeClasses = {
@@ -60,9 +65,9 @@ export function Logo({
       )}
 
       <img
-        src={processedSrc}
-        alt="Player Mindset Viagens"
-        className={`${sizeClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] filter drop-shadow-[0_8px_24px_rgba(196,39,39,0.3)]`}
+        src={imageSrc}
+        alt={alt}
+        className={`${sizeClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] filter drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)]`}
         loading="eager"
       />
     </div>
