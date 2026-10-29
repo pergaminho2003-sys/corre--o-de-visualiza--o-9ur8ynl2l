@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Logo } from './Logo'
+import { Link } from 'react-router-dom'
+import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-3-91fb8.png'
 import { Button } from '@/components/ui/button'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 
@@ -53,7 +54,30 @@ export function Header({ activeSection = '' }: HeaderProps) {
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <Logo />
+          <Link
+            to="/"
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
+            aria-label="Player Mindset Viagens - Início"
+          >
+            {/* Logo redonda original enviada pelo usuário (círculo branco com asa vermelha e tipografia original) */}
+            <div className="relative shrink-0 flex items-center justify-center p-0.5 rounded-full shadow-md shadow-black/40 group-hover:scale-105 transition-transform duration-200">
+              <img
+                src={roundHeaderLogoAsset}
+                alt="Player Mindset Viagens"
+                className="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full"
+                loading="eager"
+              />
+            </div>
+            {/* Wordmark no cabeçalho */}
+            <div className="flex flex-col leading-tight select-none">
+              <span className="text-sm sm:text-base font-extrabold tracking-tight text-white font-heading">
+                PLAYER <span className="text-red-500">MINDSET</span>
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
+                Viagens
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -118,7 +142,29 @@ export function Header({ activeSection = '' }: HeaderProps) {
           <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-slate-950 border-l border-slate-800 p-6 flex flex-col justify-between shadow-2xl">
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-slate-800/80">
-                <Logo onClick={() => setMobileOpen(false)} />
+                <Link
+                  to="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
+                  aria-label="Player Mindset Viagens - Início"
+                >
+                  <div className="relative shrink-0 flex items-center justify-center p-0.5 rounded-full shadow-md shadow-black/40">
+                    <img
+                      src={roundHeaderLogoAsset}
+                      alt="Player Mindset Viagens"
+                      className="h-10 w-10 object-contain rounded-full"
+                      loading="eager"
+                    />
+                  </div>
+                  <div className="flex flex-col leading-tight select-none">
+                    <span className="text-sm font-extrabold tracking-tight text-white font-heading">
+                      PLAYER <span className="text-red-500">MINDSET</span>
+                    </span>
+                    <span className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
+                      Viagens
+                    </span>
+                  </div>
+                </Link>
                 <button
                   type="button"
                   onClick={() => setMobileOpen(false)}
