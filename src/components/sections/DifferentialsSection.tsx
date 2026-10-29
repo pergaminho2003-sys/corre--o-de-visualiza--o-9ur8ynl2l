@@ -40,50 +40,6 @@ const DIFFERENTIALS = [
 ]
 
 export function DifferentialsSection() {
-  return (
-    <section
-      id="diferenciais"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/30 border-t border-slate-900 relative"
-    >
-      <div className="max-w-[1200px] mx-auto">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-xs uppercase font-bold tracking-widest text-red-500">
-            Por que a Player Mindset?
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-            O padrão de excelência para quem vive de futebol
-          </h2>
-          <div className="sprint-line mx-auto" />
-          <p className="text-slate-400 text-sm sm:text-base pt-2">
-            Entendemos a rotina, a pressão e os detalhes que fazem uma comissão técnica ter sucesso
-            fora de casa.
-          </p>
-        </div>
-
-        {/* 6 Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {DIFFERENTIALS.map((item, idx) => {
-            const Icon = item.icon
-            return (
-              <div
-                key={idx}
-                className="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-7 hover:border-red-500/40 hover:bg-slate-950 transition-all duration-200 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all duration-200">
-                  <Icon className="w-6 h-6" />
-                </div>
-
-                <h3 className="text-lg font-bold text-white font-heading mb-2.5 group-hover:text-red-400 transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
-  )
+  return
+  null
 }
