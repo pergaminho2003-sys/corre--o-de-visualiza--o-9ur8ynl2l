@@ -21,7 +21,7 @@ const STEPS = [
     icon: Trophy,
     title: 'É só entrar em campo',
     description:
-      'Acompanhamos a delegação do embarque ao retorno. Cuidamos de todo o backstage para seu time focar exclusivamente no troféu.',
+      'Cuidamos de cada detalhe do embarque de menores de idade — autorizações, documentação e acompanhamento — e oferecemos suporte jurídico dedicado para resolver qualquer imprevisto, garantindo tranquilidade para a delegação e para o clube.',
     highlight: 'Suporte presencial e 24/7',
   },
 ]
