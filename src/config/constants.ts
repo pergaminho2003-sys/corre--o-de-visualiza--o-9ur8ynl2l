@@ -51,9 +51,7 @@ export function buildWhatsAppProposalUrl(data: {
   }
 
   lines.push(``)
-  lines.push(
-    `Acabei de preencher o formulário no site e aguardo o retorno com a proposta. Obrigado!`,
-  )
+  lines.push(`Acabei de preencher o formulário no site e aguardo retorno`)
 
   const text = lines.join('\n')
   return `https://wa.me/${APP_CONSTANTS.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
