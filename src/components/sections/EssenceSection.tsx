@@ -131,37 +131,7 @@ export function EssenceSection() {
           </div>
 
           {/* Pillars Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 text-center sm:text-left hover:border-red-500/30 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-3 mx-auto sm:mx-0">
-                <Compass className="w-4 h-4" />
-              </div>
-              <h4 className="text-sm font-bold text-white font-heading">Curiosidade Ativa</h4>
-              <p className="text-xs text-slate-400 mt-1">
-                O impulso inicial para desbravar novas fronteiras e desafios.
-              </p>
-            </div>
-
-            <div className="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 text-center sm:text-left hover:border-red-500/30 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-3 mx-auto sm:mx-0">
-                <Flame className="w-4 h-4" />
-              </div>
-              <h4 className="text-sm font-bold text-white font-heading">Foco & Disciplina</h4>
-              <p className="text-xs text-slate-400 mt-1">
-                Cada detalhe logístico sincronizado para a vitória.
-              </p>
-            </div>
-
-            <div className="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 text-center sm:text-left hover:border-red-500/30 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-3 mx-auto sm:mx-0">
-                <Heart className="w-4 h-4" />
-              </div>
-              <h4 className="text-sm font-bold text-white font-heading">Legado & Conexão</h4>
-              <p className="text-xs text-slate-400 mt-1">
-                Histórias e memórias que marcam a carreira para sempre.
-              </p>
-            </div>
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
 
           {/* Mini CTA button */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-950 border border-slate-800">

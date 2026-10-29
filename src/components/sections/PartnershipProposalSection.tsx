@@ -75,9 +75,7 @@ export function PartnershipProposalSection() {
           <div className="sprint-line mx-auto" />
 
           <p className="text-slate-300 text-sm sm:text-base md:text-lg pt-2 leading-relaxed">
-            Estruturamos a operação de viagens do seu clube com padrão profissional internacional.
-            Menos desgaste operacional para a diretoria, máxima economia para o orçamento e total
-            segurança para atletas e comissão técnica.
+            Diferenciais estratégicos
           </p>
         </div>
 
