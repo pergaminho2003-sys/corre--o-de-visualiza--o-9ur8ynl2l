@@ -60,10 +60,12 @@ export function HeroSection() {
         <div className="max-w-[840px] space-y-6 flex flex-col items-center">
           {/* Headline - "Seu clube foca no jogo. A gente cuida da viagem." / "Transforme viagens em vitórias" */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading uppercase">
-            Seu clube foca no jogo.{' '}
-            <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
-              A gente cuida da viagem.
-            </span>
+            Seu clube foca no jogo.
+            <div>
+              <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
+                A gente cuida da viagem.
+              </span>
+            </div>
           </h1>
 
           {/* Subtitle */}
