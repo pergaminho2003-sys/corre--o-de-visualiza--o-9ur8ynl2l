@@ -61,7 +61,7 @@ export function HeroSection() {
               onClick={() => scrollTo('#orcamento')}
               className="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-6 rounded-xl text-base shadow-xl shadow-red-600/30 transition-transform duration-200 hover:scale-[1.02] flex items-center justify-center gap-2"
             >
-              Solicitar orçamento
+              Solicitar reunião
               <ArrowUpRight className="w-5 h-5" />
             </Button>
 
