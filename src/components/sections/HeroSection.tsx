@@ -1,12 +1,9 @@
 import { APP_CONSTANTS } from '@/config/constants'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight, ChevronDown, Compass, Shield, Award } from 'lucide-react'
-import heroLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-1-921c2.png'
-import { useTransparentLogo } from '@/hooks/use-transparent-logo'
+import heroLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-5-c2bc3.png'
 
 export function HeroSection() {
-  const { processedSrc } = useTransparentLogo(heroLogoAsset, { brightenText: true })
-
   const scrollTo = (id: string) => {
     const el = document.querySelector(id)
     if (el) {
@@ -45,10 +42,10 @@ export function HeroSection() {
             aria-hidden="true"
           />
 
-          {/* Logo tratada para fundo escuro: asa e MINDSET em vermelho #C42727, PLAYER em branco nítido */}
+          {/* Logo oficial da Player Mindset Viagens */}
           <div className="relative z-10 flex items-center justify-center py-2 sm:py-3 px-4">
             <img
-              src={processedSrc}
+              src={heroLogoAsset}
               alt="Player Mindset Viagens"
               className="h-28 sm:h-36 md:h-44 lg:h-52 w-auto max-w-[88vw] sm:max-w-md md:max-w-lg object-contain transition-transform duration-300 hover:scale-[1.02] filter drop-shadow-[0_8px_30px_rgba(0,0,0,0.6)] drop-shadow-[0_2px_8px_rgba(196,39,39,0.25)]"
               loading="eager"
