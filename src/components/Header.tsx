@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-3-91fb8.png'
+import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-4-ba585.png'
 import { useTransparentRoundLogo } from '@/hooks/use-transparent-round-logo'
 import { Button } from '@/components/ui/button'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
