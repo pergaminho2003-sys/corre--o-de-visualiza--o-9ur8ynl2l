@@ -109,7 +109,7 @@ export function PartnershipProposalSection() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-heading tracking-tight">
             Uma Parceria Estratégica em{' '}
-            <span className="bg-gradient-to-r from-red-500 via-red-400 to-rose-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
               Logística & Performance
             </span>
           </h2>

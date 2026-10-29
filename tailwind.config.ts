@@ -81,6 +81,35 @@ export default {
           4: 'hsl(var(--chart-4))',
           5: 'hsl(var(--chart-5))',
         },
+        // Brand palette unified with the exact Player Mindset logo red (#C42727)
+        red: {
+          50: '#FDF2F2',
+          100: '#FDE8E8',
+          200: '#FBD0D0',
+          300: '#F69B9B',
+          400: '#E54545',
+          500: '#D62F2F',
+          600: '#C42727', // Exact official logo red
+          700: '#A31F1F',
+          800: '#841B1B',
+          900: '#681717',
+          950: '#3D0A0A',
+        },
+        brand: {
+          50: '#FDF2F2',
+          100: '#FDE8E8',
+          200: '#FBD0D0',
+          300: '#F69B9B',
+          400: '#E54545',
+          500: '#D62F2F',
+          600: '#C42727', // Exact official logo red
+          700: '#A31F1F',
+          800: '#841B1B',
+          900: '#681717',
+          950: '#3D0A0A',
+          DEFAULT: '#C42727',
+          dark: '#121316',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

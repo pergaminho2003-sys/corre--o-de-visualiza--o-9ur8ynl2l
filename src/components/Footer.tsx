@@ -54,7 +54,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Col 1: Brand */}
           <div className="md:col-span-5 space-y-5">
-            <Logo />
+            <Logo containerVariant="footer" size="md" />
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               Agência especializada em viagens e torneios esportivos internacionais para clubes de
               futebol, categorias de base e atletas profissionais.

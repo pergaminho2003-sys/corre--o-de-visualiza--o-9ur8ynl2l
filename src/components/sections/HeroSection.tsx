@@ -33,17 +33,27 @@ export function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center">
         <div className="max-w-[720px] space-y-6 text-left">
-          {/* Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
-            <span className="w-2 h-2 rounded-full bg-red-500 absolute" />
-            <span className="ml-1">Viagens&nbsp;para clubes e atletas</span>
+          {/* Brand Mark & Pill Badge */}
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-2xl bg-slate-950/80 border border-slate-800/90 shadow-lg shadow-black/40 backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
+              </span>
+              <span className="text-xs font-extrabold uppercase tracking-wider text-slate-200 font-heading">
+                Player Mindset Viagens
+              </span>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
+              <span>Viagens de alta performance esportiva</span>
+            </div>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] font-heading uppercase">
             Transforme viagens em{' '}
-            <span className="bg-gradient-to-r from-red-500 via-red-400 to-rose-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
               vitórias
             </span>
           </h1>

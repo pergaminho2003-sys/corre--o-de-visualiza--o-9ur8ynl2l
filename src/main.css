@@ -144,11 +144,11 @@
     animation: pulse-glow 4s ease-in-out infinite;
   }
 
-  /* Red sprint line */
+  /* Red sprint line unified with brand red */
   .sprint-line {
     height: 4px;
     width: 64px;
-    background: linear-gradient(90deg, #c42727 0%, #e53e3e 100%);
+    background: linear-gradient(90deg, #c42727 0%, #d62f2f 100%);
     border-radius: 9999px;
   }
 
