@@ -8,10 +8,8 @@ import {
   ArrowRight,
   ShieldCheck,
   Clock,
-  Sparkles,
   PlaneTakeoff,
   MapPin,
-  TrendingUp,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -112,7 +110,7 @@ export function PartnershipProposalSection() {
         </div>
 
         {/* Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {PARTNERSHIP_PILLARS.map((pillar) => {
             const Icon = pillar.icon
 
@@ -157,47 +155,6 @@ export function PartnershipProposalSection() {
               </div>
             )
           })}
-
-          {/* 6th Card: Commercial Value Summary & Quick Fact */}
-          <div className="bg-gradient-to-br from-red-950/40 via-slate-900 to-slate-950 border border-red-900/50 rounded-2xl p-7 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300">
-            <div>
-              <div className="flex items-center justify-between mb-5">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-red-300 bg-red-600/20 border border-red-500/30 px-2.5 py-1 rounded-full">
-                  Impacto Financeiro
-                </span>
-                <TrendingUp className="w-6 h-6 text-red-400" />
-              </div>
-
-              <h3 className="text-xl font-bold text-white font-heading mb-2">
-                Otimização Real de Orçamento
-              </h3>
-              <p className="text-xs font-semibold text-slate-400 mb-3.5">
-                Redução comprovada de custos logísticos
-              </p>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Clubes parceiros alcançam em média até{' '}
-                <strong className="text-white font-bold">25% de economia</strong> com a
-                centralização de rotas, eliminação de intermediários e negociação antecipada de
-                blocos aéreos para a temporada.
-              </p>
-
-              <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-red-500 shrink-0" />
-                  <span>Contratos corporativos homologados</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <PlaneTakeoff className="w-4 h-4 text-red-400 shrink-0" />
-                  <span>Franquia para material esportivo</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold">
-              <span className="text-red-400">Auditoria & Transparência</span>
-              <Sparkles className="w-3.5 h-3.5 text-red-500" />
-            </div>
-          </div>
         </div>
 
         {/* Strong Commercial Callout Card (Meeting Invite: Presential or Online) */}
