@@ -36,10 +36,6 @@ export function EssenceSection() {
           Por Trás do <span className="text-red-500">Mindset</span>
         </h2>
         <div className="sprint-line mx-auto" />
-        <p className="text-slate-400 text-sm sm:text-base pt-2">
-          Da vivência real nos campos e quadras — onde cada viagem é a extensão da preparação de um
-          campeão.
-        </p>
       </div>
 
       {/* Main Two-Column Editorial Card */}

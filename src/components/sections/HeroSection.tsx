@@ -102,10 +102,6 @@ export function HeroSection() {
               <Award className="w-4 h-4 text-red-400 shrink-0" />
               <span>Agilidade e condições especiais</span>
             </div>
-            <div className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
-              <span>Plantão 24/7 na viagem</span>
-            </div>
           </div>
         </div>
       </div>
