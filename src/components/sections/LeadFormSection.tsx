@@ -397,7 +397,7 @@ export function LeadFormSection() {
                   ) : (
                     <>
                       <Send className="w-5 h-5 text-red-500" />
-                      Enviar solicitação de orçamento
+                      Enviar solicitação
                     </>
                   )}
                 </Button>
