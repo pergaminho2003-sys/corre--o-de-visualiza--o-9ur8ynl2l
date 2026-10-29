@@ -1,6 +1,5 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import './process-logo.mjs'
 
 const srcLogo = path.resolve('src/assets/download-4b9e3.png')
 const publicDir = path.resolve('public')
