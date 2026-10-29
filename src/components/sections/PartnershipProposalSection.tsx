@@ -114,14 +114,9 @@ export function PartnershipProposalSection() {
                   <p className="text-xs font-semibold text-slate-400 mb-3.5">{pillar.subtitle}</p>
 
                   {/* Description */}
-                  <p className="text-xs text-slate-400 leading-relaxed">{pillar.description}</p>
                 </div>
 
                 {/* Footer tag */}
-                <div className="mt-5 pt-4 border-t border-slate-900 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                  <span className="text-[11px] font-medium text-slate-400">{pillar.highlight}</span>
-                </div>
               </div>
             )
           })}
