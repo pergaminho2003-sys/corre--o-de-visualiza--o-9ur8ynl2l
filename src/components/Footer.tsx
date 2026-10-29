@@ -43,7 +43,7 @@ export function Footer() {
             onClick={() => scrollToSection('#orcamento')}
             className="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-6 rounded-xl text-base shadow-lg shadow-red-600/25 shrink-0 transition-transform hover:scale-105"
           >
-            Solicitar orçamento agora
+            Solicitar reunião agora
             <ArrowUpRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
