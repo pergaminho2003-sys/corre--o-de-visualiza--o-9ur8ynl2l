@@ -1,7 +1,6 @@
 import {
   Users2,
   Zap,
-  BadgePercent,
   ReceiptText,
   LifeBuoy,
   CalendarCheck,
@@ -40,19 +39,8 @@ const PARTNERSHIP_PILLARS = [
     highlight: 'Plantão tático 24/7',
   },
   {
-    id: 'condicoes-comerciais',
-    number: '03',
-    icon: BadgePercent,
-    badge: 'Diferencial Competitivo',
-    title: 'Condições Comerciais Diferenciadas',
-    subtitle: 'Tarifas corporativas de grupo com economia comprovada',
-    description:
-      'Acordos diretos com as principais companhias aéreas e redes hoteleiras esportivas. Garantimos tarifas negociadas abaixo do balcão tradicional, franquia especial para material esportivo e políticas flexíveis de remarcação.',
-    highlight: 'Tarifas esportivas negociadas',
-  },
-  {
     id: 'faturamento-flexivel',
-    number: '04',
+    number: '03',
     icon: ReceiptText,
     badge: 'Controle Financeiro',
     title: 'Faturamento Conforme as Necessidades do Clube',
@@ -63,7 +51,7 @@ const PARTNERSHIP_PILLARS = [
   },
   {
     id: 'suporte-toda-operacao',
-    number: '05',
+    number: '04',
     icon: LifeBuoy,
     badge: 'Do Embarque ao Retorno',
     title: 'Suporte Durante Toda a Operação',
@@ -123,20 +111,15 @@ export function PartnershipProposalSection() {
           </p>
         </div>
 
-        {/* 5 Pillars Grid */}
+        {/* Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PARTNERSHIP_PILLARS.map((pillar, idx) => {
+          {PARTNERSHIP_PILLARS.map((pillar) => {
             const Icon = pillar.icon
-            const isFeatured = idx === 2 // Commercial differential highlighted
 
             return (
               <div
                 key={pillar.id}
-                className={`group relative rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 ${
-                  isFeatured
-                    ? 'bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 border-2 border-red-500/50 shadow-2xl shadow-red-500/10 lg:scale-[1.02]'
-                    : 'bg-slate-950/80 border border-slate-800/90 hover:border-red-500/40 hover:bg-slate-950'
-                }`}
+                className="group relative rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 bg-slate-950/80 border border-slate-800/90 hover:border-red-500/40 hover:bg-slate-950"
               >
                 {/* Top Badge & Number */}
                 <div>
