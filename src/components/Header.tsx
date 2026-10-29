@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-4-ba585.png'
-import { useTransparentRoundLogo } from '@/hooks/use-transparent-round-logo'
+import roundHeaderLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-5-74466.png'
 import { Button } from '@/components/ui/button'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 
@@ -22,7 +21,6 @@ const NAV_ITEMS = [
 export function Header({ activeSection = '' }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { processedSrc } = useTransparentRoundLogo(roundHeaderLogoAsset)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,12 +59,12 @@ export function Header({ activeSection = '' }: HeaderProps) {
             className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl py-0.5"
             aria-label="Player Mindset Viagens - Início"
           >
-            {/* Logo da marca no cabeçalho: fundo e círculo branco removidos para os elementos ficarem diretamente sobre o fundo do site */}
-            <div className="relative shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+            {/* Logo da marca no cabeçalho: recorte circular com fundo branco original mantido */}
+            <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md shadow-black/20 group-hover:scale-105 transition-transform duration-200">
               <img
-                src={processedSrc}
+                src={roundHeaderLogoAsset}
                 alt="Player Mindset Viagens"
-                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full object-cover"
                 loading="eager"
               />
             </div>
@@ -150,11 +148,11 @@ export function Header({ activeSection = '' }: HeaderProps) {
                   className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl"
                   aria-label="Player Mindset Viagens - Início"
                 >
-                  <div className="relative shrink-0 flex items-center justify-center">
+                  <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md shadow-black/20">
                     <img
-                      src={processedSrc}
+                      src={roundHeaderLogoAsset}
                       alt="Player Mindset Viagens"
-                      className="h-12 w-12 object-contain"
+                      className="h-12 w-12 rounded-full object-cover"
                       loading="eager"
                     />
                   </div>
