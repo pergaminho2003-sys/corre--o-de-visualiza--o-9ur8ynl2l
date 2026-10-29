@@ -56,8 +56,8 @@ export function Footer() {
           <div className="md:col-span-5 space-y-5">
             <Logo containerVariant="footer" size="md" />
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Agência especializada em viagens e torneios esportivos internacionais para clubes de
-              futebol, categorias de base e atletas profissionais.
+              Agência especializada em viagens para clubes de futebol, categorias de base e atletas
+              profissionais.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
