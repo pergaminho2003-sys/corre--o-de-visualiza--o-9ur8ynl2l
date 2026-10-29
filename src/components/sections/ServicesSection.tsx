@@ -58,7 +58,7 @@ export function ServicesSection() {
 
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-13 h-13 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors duration-200">
+                  <div className="w-12 h-12 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors duration-200">
                     <Icon className="w-6 h-6" />
                   </div>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-800/80 px-2.5 py-1 rounded-full">

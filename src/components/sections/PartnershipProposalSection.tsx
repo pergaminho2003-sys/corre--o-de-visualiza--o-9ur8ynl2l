@@ -131,8 +131,8 @@ export function PartnershipProposalSection() {
                   </div>
 
                   {/* Icon */}
-                  <div className="w-13 h-13 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-5 group-hover:bg-red-600 group-hover:text-white transition-all duration-200">
-                    <Icon className="w-6 h-6" />
+                  <div className="w-12 h-12 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-5 group-hover:bg-red-600 group-hover:text-white transition-all duration-200">
+                    {Icon ? <Icon className="w-6 h-6" /> : null}
                   </div>
 
                   {/* Title & Subtitle */}

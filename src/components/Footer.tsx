@@ -213,7 +213,15 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-14 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {currentYear} Player Mindset Viagens. Todos os direitos reservados.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <p>© {currentYear} Player Mindset Viagens. Todos os direitos reservados.</p>
+            <a
+              href="/privacidade"
+              className="text-slate-400 hover:text-red-400 transition-colors underline-offset-4 hover:underline"
+            >
+              Política de Privacidade
+            </a>
+          </div>
           <div className="flex items-center gap-1 text-slate-400">
             <span>Feito para a alta performance no esporte</span>
             <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline mx-0.5" />

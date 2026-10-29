@@ -120,7 +120,7 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
             </div>
 
             <div className="flex items-center gap-4 pt-6 border-t border-slate-800">
-              <div className="w-13 h-13 rounded-full bg-slate-950 border-2 border-red-500 text-red-400 font-bold flex items-center justify-center text-base shrink-0 shadow-md shadow-red-500/20">
+              <div className="w-12 h-12 rounded-full bg-slate-950 border-2 border-red-500 text-red-400 font-bold flex items-center justify-center text-base shrink-0 shadow-md shadow-red-500/20">
                 {getInitials(featuredItem.name)}
               </div>
               <div>
