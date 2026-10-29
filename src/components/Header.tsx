@@ -62,7 +62,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
             {/* Logo da marca no cabeçalho: recorte circular com fundo branco original mantido (64px desktop / 48px mobile) */}
             <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md shadow-black/20 group-hover:scale-105 transition-transform duration-200">
               <img
-                src={roundHeaderLogoAsset}
+                src="/visual-edits/sem-nome-851-x-310-px-logotipo-8-19a473f0.png"
                 alt="Player Mindset Viagens"
                 className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full object-cover"
                 loading="eager"
