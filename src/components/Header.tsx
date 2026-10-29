@@ -88,7 +88,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
               onClick={() => handleNavClick('#orcamento')}
               className="bg-red-600 hover:bg-red-500 text-white font-bold shadow-lg shadow-red-600/25 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02]"
             >
-              Solicitar orçamento
+              Solicitar reunião
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
