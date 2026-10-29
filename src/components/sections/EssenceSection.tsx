@@ -116,16 +116,7 @@ export function EssenceSection() {
               </blockquote>
 
               {/* Growth Mindset Text */}
-              <div className="pt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-                <p>
-                  <span>
-                    Não se trata apenas de emitir bilhetes aéreos ou reservar hotéis. Trata-se de
-                    entender{' '}
-                  </span>
-                  que a vida acontece além das fronteiras — quando você se entrega ao desconhecido
-                  com coragem e confiança.
-                </p>
-              </div>
+              <div className="pt-4 text-slate-300 text-sm sm:text-base leading-relaxed"></div>
 
               {/* Inspiring Closing Statement */}
               <div className="p-5 rounded-2xl bg-gradient-to-r from-red-950/50 via-slate-900/80 to-slate-950 border border-red-900/40 text-slate-200 text-sm sm:text-base font-medium leading-relaxed flex items-start gap-3.5 shadow-inner">
