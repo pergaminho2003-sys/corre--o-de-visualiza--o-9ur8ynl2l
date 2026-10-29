@@ -141,18 +141,10 @@ export function LeadFormSection() {
 
   return (
     <section id="orcamento" className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
-      {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16 space-y-3"></div>
-
-      {/* Two-column layout: Context left, Match Ticket form right */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        {/* Left Column: Context & Direct Contact */}
-        <div className="lg:col-span-5 space-y-8">
-          <div className="space-y-4"></div>
-        </div>
-
-        {/* Right Column: Match Ticket Form Card */}
-        <div className="lg:col-span-7">
+      {/* Formulário de proposta centralizado */}
+      <div className="max-w-3xl mx-auto">
+        {/* Match Ticket Form Card */}
+        <div>
           <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden ring-4 ring-red-500/20 border border-slate-200">
             {/* Ticket header perforation styling */}
             <div className="border-b-2 border-dashed border-slate-300 pb-6 mb-8 flex items-center justify-between">
