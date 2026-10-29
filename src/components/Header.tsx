@@ -59,7 +59,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
             className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-2xl py-0.5"
             aria-label="Player Mindset Viagens - Início"
           >
-            {/* Logo da marca no cabeçalho: recorte circular com fundo branco original mantido */}
+            {/* Logo da marca no cabeçalho: recorte circular com fundo branco original mantido (64px desktop / 48px mobile) */}
             <div className="relative shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-md shadow-black/20 group-hover:scale-105 transition-transform duration-200">
               <img
                 src={roundHeaderLogoAsset}
