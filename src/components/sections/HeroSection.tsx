@@ -37,18 +37,6 @@ export function HeroSection() {
         {/* Centered Brand Mark / Logo - Hero Main Spotlight */}
         <div className="mb-6 sm:mb-8 flex flex-col items-center justify-center relative group">
           {/* Ambient red halo ring around the logo */}
-          <div
-            className="absolute -inset-4 sm:-inset-8 rounded-full bg-gradient-to-b from-red-600/20 via-red-600/5 to-transparent blur-2xl pointer-events-none"
-            aria-hidden="true"
-          />
-
-          <Logo
-            size="hero"
-            containerVariant="hero"
-            asLink={false}
-            showGlow={true}
-            className="transition-transform duration-300 hover:scale-[1.02]"
-          />
 
           {/* Badge pill right below the logo */}
           <div className="mt-4 sm:mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-red-500/40 text-xs font-semibold text-red-300 shadow-lg shadow-red-500/10 backdrop-blur-md">
