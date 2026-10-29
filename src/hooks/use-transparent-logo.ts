@@ -100,13 +100,13 @@ export function useTransparentLogo(
           const isRed = r > 130 && r > g * 1.6 && r > b * 1.6
 
           if (isRed) {
-            // Keep the vibrant red (#C42727 and shades)
-            // Just preserve red as is with full opacity
+            // Keep the vibrant brand red (#C42727 and shades: asa and 'MINDSET')
+            // Ensure brand red remains punchy and opaque
             data[i + 3] = 255
           } else if (options.brightenText) {
-            // It's the dark typography ('PLAYER', 'VIAGENS', hyphens)
-            // On a pitch black/dark hero background, white text provides 100% legibility and premium look
-            // Turn dark gray to pure white/light silver:
+            // Dark typography ('PLAYER', 'VIAGENS', hyphens)
+            // On dark background, turn dark graphite/gray into crisp pure white/light silver
+            // with full opacity for maximum legibility and elegance
             data[i] = 255
             data[i + 1] = 255
             data[i + 2] = 255

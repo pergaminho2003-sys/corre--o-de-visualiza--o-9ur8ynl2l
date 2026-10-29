@@ -1,9 +1,12 @@
 import { APP_CONSTANTS } from '@/config/constants'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight, ChevronDown, Compass, Shield, Award } from 'lucide-react'
-import heroLogoNew from '@/assets/sem-nome-851-x-310-px-logotipo-1-921c2.png'
+import heroLogoAsset from '@/assets/sem-nome-851-x-310-px-logotipo-1-921c2.png'
+import { useTransparentLogo } from '@/hooks/use-transparent-logo'
 
 export function HeroSection() {
+  const { processedSrc } = useTransparentLogo(heroLogoAsset, { brightenText: true })
+
   const scrollTo = (id: string) => {
     const el = document.querySelector(id)
     if (el) {
@@ -34,51 +37,20 @@ export function HeroSection() {
 
       {/* Hero Content - Centered Layout */}
       <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
-        {/* Centered Brand Mark / Logo - Hero Main Spotlight com campo de futebol iluminado com fade suave */}
+        {/* Centered Brand Mark / Logo - Hero Main Spotlight com glow vermelho sutil da marca */}
         <div className="mb-6 sm:mb-8 flex flex-col items-center justify-center relative group">
-          {/* Spotlight background: campo de futebol iluminado com luz e fade radial ultra suave */}
+          {/* Subtle brand red glow behind the logo */}
           <div
-            className="absolute -inset-10 sm:-inset-16 md:-inset-20 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden"
+            className="absolute inset-0 -m-8 sm:-m-12 bg-radial from-red-600/25 via-red-600/10 to-transparent rounded-full blur-2xl pointer-events-none animate-pulse-glow"
             aria-hidden="true"
-          >
-            {/* Imagem do campo de futebol iluminado com luz e holofotes de estádio */}
-            <div
-              className="relative w-[340px] sm:w-[500px] md:w-[620px] lg:w-[700px] h-[220px] sm:h-[280px] md:h-[340px] lg:h-[380px] rounded-full overflow-hidden"
-              style={{
-                maskImage:
-                  'radial-gradient(ellipse 65% 65% at 50% 50%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.7) 55%, transparent 95%)',
-                WebkitMaskImage:
-                  'radial-gradient(ellipse 65% 65% at 50% 50%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.7) 55%, transparent 95%)',
-              }}
-            >
-              <img
-                src="https://img.usecurling.com/p/800/600?q=football%20pitch%20stadium%20lights%20grass&dpr=2"
-                alt=""
-                className="w-full h-full object-cover object-center scale-110 filter brightness-125 contrast-105 saturate-110"
-                loading="eager"
-              />
-              {/* Overlay de luz translúcida que clareia o centro atrás da tipografia grafite escura */}
-              <div
-                className="absolute inset-0 bg-radial from-white/80 via-white/40 to-transparent"
-                style={{
-                  mixBlendMode: 'screen',
-                }}
-              />
-              {/* Toque suave de brilho âmbar/dourado de luz de estádio */}
-              <div className="absolute inset-0 bg-radial from-amber-100/35 via-white/20 to-transparent" />
-            </div>
+          />
 
-            {/* Halo suave difuso ao redor para transição perfeita com o fundo escuro do hero */}
-            <div className="absolute w-[360px] sm:w-[520px] md:w-[660px] h-[240px] sm:h-[300px] md:h-[360px] bg-white/25 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute w-[280px] sm:w-[400px] md:w-[500px] h-[180px] sm:h-[240px] md:h-[280px] bg-red-600/15 rounded-full blur-2xl pointer-events-none" />
-          </div>
-
-          {/* Logo original com fidelidade total de cores (asa vermelha, PLAYER grafite escuro, MINDSET vermelho, VIAGENS cinza) */}
+          {/* Logo tratada para fundo escuro: asa e MINDSET em vermelho #C42727, PLAYER em branco nítido */}
           <div className="relative z-10 flex items-center justify-center py-2 sm:py-3 px-4">
             <img
-              src={heroLogoNew}
+              src={processedSrc}
               alt="Player Mindset Viagens"
-              className="h-28 sm:h-36 md:h-44 lg:h-52 w-auto max-w-[88vw] sm:max-w-md md:max-w-lg object-contain transition-transform duration-300 hover:scale-[1.02] filter drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] drop-shadow-[0_1px_3px_rgba(255,255,255,0.4)]"
+              className="h-28 sm:h-36 md:h-44 lg:h-52 w-auto max-w-[88vw] sm:max-w-md md:max-w-lg object-contain transition-transform duration-300 hover:scale-[1.02] filter drop-shadow-[0_8px_30px_rgba(0,0,0,0.6)] drop-shadow-[0_2px_8px_rgba(196,39,39,0.25)]"
               loading="eager"
             />
           </div>
