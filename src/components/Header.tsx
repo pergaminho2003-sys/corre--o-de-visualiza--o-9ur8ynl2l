@@ -152,7 +152,7 @@ export function Header({ activeSection = '' }: HeaderProps) {
                 onClick={() => handleNavClick('#orcamento')}
                 className="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-6 rounded-xl shadow-lg shadow-red-600/20"
               >
-                Solicitar orçamento
+                Falar com o time&nbsp;
               </Button>
               <p className="text-center text-xs text-slate-500">
                 Atendimento rápido para clubes e categorias de base
