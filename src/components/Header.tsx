@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const NAV_ITEMS = [
   { label: 'Números', href: '#numeros' },
-  { label: 'Experiências', href: '#experiencias' },
+  { label: 'Serviços', href: '#experiencias' },
   { label: 'Nossa Essência', href: '#essencia' },
   { label: 'Como funciona', href: '#como-funciona' },
   { label: 'Diferenciais', href: '#proposta-parceria' },
