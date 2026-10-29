@@ -79,7 +79,7 @@ export function TestimonialsSection({ testimonials = [] }: { testimonials?: Test
           Casos de Sucesso
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          Clubes que já jogaram fora de casa com a gente
+          Clubes que jogam com a gente!
         </h2>
         <div className="sprint-line mx-auto" />
         <p className="text-slate-400 text-sm sm:text-base pt-2">

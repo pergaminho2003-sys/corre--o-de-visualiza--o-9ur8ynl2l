@@ -136,7 +136,7 @@ export function EssenceSection() {
           {/* Mini CTA button */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-950 border border-slate-800">
             <p className="text-xs sm:text-sm text-slate-300 text-center sm:text-left">
-              Quer planejar a próxima viagem esportiva com quem entende o seu ritmo?
+              Já precisa organizar uma próxima viagem?
             </p>
             <Button
               onClick={scrollToOrcamento}
