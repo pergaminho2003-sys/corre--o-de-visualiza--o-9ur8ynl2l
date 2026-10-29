@@ -142,16 +142,9 @@ export function PartnershipProposalSection() {
                   <p className="text-xs font-semibold text-slate-400 mb-3.5">{pillar.subtitle}</p>
 
                   {/* Description */}
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                    {pillar.description}
-                  </p>
                 </div>
 
                 {/* Footer tag */}
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold">
-                  <span className="text-red-400">{pillar.highlight}</span>
-                  <div className="w-2 h-2 rounded-full bg-red-500 opacity-60 group-hover:opacity-100 transition-opacity" />
-                </div>
               </div>
             )
           })}
