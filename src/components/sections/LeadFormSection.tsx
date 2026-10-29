@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
-import { APP_CONSTANTS } from '@/config/constants'
+import { APP_CONSTANTS, buildWhatsAppProposalUrl } from '@/config/constants'
 import { createLead } from '@/services/leads'
 import { LeadPayload } from '@/types/landing'
 import {
@@ -12,10 +12,8 @@ import {
   Loader2,
   Mail,
   MessageCircle,
-  Clock,
-  ShieldCheck,
   AlertCircle,
-  Sparkles,
+  ExternalLink,
 } from 'lucide-react'
 
 export function LeadFormSection() {
@@ -35,6 +33,7 @@ export function LeadFormSection() {
   const [success, setSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
+  const [whatsAppUrl, setWhatsAppUrl] = useState<string | null>(null)
 
   // Listen for custom meeting selection from other sections (e.g., PartnershipProposalSection)
   React.useEffect(() => {
@@ -104,6 +103,27 @@ export function LeadFormSection() {
         estimated_trips: formData.estimated_trips,
         message: finalMessage,
       })
+
+      // Gerar a URL do WhatsApp com o resumo da solicitação
+      const url = buildWhatsAppProposalUrl({
+        club_name: formData.club_name.trim(),
+        contact_name: formData.contact_name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        estimated_trips: formData.estimated_trips,
+        preferred_meeting: preferredMeeting,
+        message: formData.message?.trim(),
+      })
+
+      setWhatsAppUrl(url)
+
+      // Abrir o WhatsApp automaticamente em nova aba
+      try {
+        window.open(url, '_blank', 'noopener,noreferrer')
+      } catch (openErr) {
+        console.warn('Não foi possível abrir automaticamente o WhatsApp:', openErr)
+      }
+
       setSuccess(true)
     } catch (err: any) {
       console.error('Falha ao enviar proposta:', err)
@@ -136,6 +156,7 @@ export function LeadFormSection() {
     setPreferredMeeting('indiferente')
     setFieldErrors({})
     setErrorMessage(null)
+    setWhatsAppUrl(null)
     setSuccess(false)
   }
 
@@ -176,22 +197,56 @@ export function LeadFormSection() {
 
             {/* Form or Success State */}
             {success ? (
-              <div className="py-10 text-center space-y-6">
+              <div className="py-8 text-center space-y-6">
                 <div className="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto ring-8 ring-red-50">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
 
                 <div className="space-y-2">
                   <h4 className="text-2xl font-black text-slate-900 font-heading">
-                    Recebemos sua solicitação!
+                    Solicitação enviada com sucesso!
                   </h4>
                   <p className="text-slate-600 text-sm max-w-md mx-auto">
-                    Nosso time de especialistas em logística esportiva entrará em contato em até 48
-                    horas úteis para apresentar o roteiro ideal.
+                    Seus dados foram registrados com segurança no sistema e nosso time de
+                    especialistas em logística esportiva já está analisando o seu pedido.
                   </p>
                 </div>
 
-                <div className="pt-4">
+                {/* WhatsApp Status and Fallback Box */}
+                <div className="max-w-lg mx-auto p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-slate-800 text-left space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                      <MessageCircle className="w-4 h-4 fill-white" />
+                    </div>
+                    <div className="flex-1 text-xs sm:text-sm">
+                      <p className="font-bold text-emerald-950 text-sm">
+                        WhatsApp aberto com o resumo do pedido
+                      </p>
+                      <p className="text-emerald-800 mt-1 leading-relaxed">
+                        Uma nova aba com a mensagem pronta resumindo sua proposta foi iniciada. Caso
+                        a janela não tenha aberto automaticamente (bloqueador de pop-ups), clique no
+                        botão abaixo para continuar:
+                      </p>
+                    </div>
+                  </div>
+
+                  {whatsAppUrl && (
+                    <div className="pt-1">
+                      <a
+                        href={whatsAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl shadow-md transition-all hover:scale-[1.01]"
+                      >
+                        <MessageCircle className="w-4 h-4 fill-white" />
+                        <span>Abrir WhatsApp com o resumo do pedido</span>
+                        <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                <div className="pt-2">
                   <Button
                     type="button"
                     variant="outline"
