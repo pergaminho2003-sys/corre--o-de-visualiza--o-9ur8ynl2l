@@ -94,10 +94,7 @@ export function HeroSection() {
 
           {/* Quick trust badges */}
           <div className="pt-6 sm:pt-8 border-t border-slate-800/60 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 text-xs text-slate-400 w-full max-w-2xl">
-            <div className="flex items-center justify-center gap-2">
-              <Shield className="w-4 h-4 text-red-500 shrink-0" />
-              <span>Logística 100% blindada</span>
-            </div>
+            <div className="flex items-center justify-center gap-2"></div>
             <div className="flex items-center justify-center gap-2">
               <Award className="w-4 h-4 text-red-400 shrink-0" />
               <span>Agilidade e condições especiais</span>
