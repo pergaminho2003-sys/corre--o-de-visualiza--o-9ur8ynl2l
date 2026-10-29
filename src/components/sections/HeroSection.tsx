@@ -71,7 +71,7 @@ export function HeroSection() {
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl">
             Organizamos sua demanda e atendemos a sua necessidade: passagens, hospedagens e
-            logística completa — para a sua equipe jogar o melhor jogo em qualquer lugar do mundo.
+            logística completa.
           </p>
 
           {/* CTAs */}
